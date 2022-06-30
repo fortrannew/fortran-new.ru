@@ -1,0 +1,342 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Оператор выбора (case) - Pascal</title>
+<meta name="description" content="Оператор выбора case осуществляет выполнение определенных действий, напрямую зависящих от значений одной и той же переменной.">
+<meta name="keywords" content="case паскаль, условия паскаль, switch pascal, оператор выбора паскаль">
+<link rel="stylesheet" href="https://fortran-new.ru/themes/fortrannew/style.min.css" type="text/css"/>
+<link rel="stylesheet" async href="https://fortran-new.ru/admin/style-structure.min.css" type="text/css"/>
+<link rel="stylesheet" async href="https://fortran-new.ru/admin/style-panelaccaunt.css" type="text/css"/>
+<link rel="stylesheet" async href="https://fortran-new.ru/autorization/style.css" type="text/css"/>
+<link rel="stylesheet" async href="https://fortran-new.ru/includes/messages/messages.min.css" type="text/css"/>
+<script async src="https://fortran-new.ru/themes/fortrannew/scripter.min.js"></script>
+<script async src="https://fortran-new.ru/autorization/script-popup.js"></script>
+<script async src="https://fortran-new.ru/admin/scripter.min.js"></script>
+<script async src="https://fortran-new.ru/includes/messages/messages.min.js"></script>
+<link rel="canonical" href="https://fortran-new.ru/pascaldelphi/operator-vybora-case/"/>
+<link rel="stylesheet" async href="https://fortran-new.ru/themes/fortrannew/mobile.css?ver=2022-06-30-09-28-28"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="image/x-icon" href="https://fortran-new.ru/themes/fortrannew/img/logo16-16-24b.ico"/><link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://fortran-new.ru/themes/fortrannew/img/logo16-16-24b.ico"/><link rel="icon" type="image/png" sizes="16x16" href="https://fortran-new.ru/themes/fortrannew/img/logo16-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://fortran-new.ru/themes/fortrannew/img/logo32-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="https://fortran-new.ru/themes/fortrannew/img/logo48-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fortran-new.ru/themes/fortrannew/img/logo192-192.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://fortran-new.ru/themes/fortrannew/img/logo76-76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://fortran-new.ru/themes/fortrannew/img/logo120-120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://fortran-new.ru/themes/fortrannew/img/logo152-152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://fortran-new.ru/themes/fortrannew/img/logo180-180.png">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0d6780"><meta name="msapplication-TileColor" content="#d5ffff"><meta name="msapplication-TileImage" content="https://fortran-new.ru/themes/fortrannew/img/logo144-144.png"><meta name="theme-color" content="#00c0ff"><script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "WebSite",        "potentialAction": {
+"@type": "SearchAction",
+"target": "https://fortran-new.ru/search?search_str={search_term}",
+"query-input": "required name=search_term"
+},		  "url": "https://fortran-new.ru/"
+}
+</script>
+<meta property="og:url" content="https://fortran-new.ru/pascaldelphi/operator-vybora-case/"><meta property="og:image" content="https://fortran-new.ru/polz/2019/06/pascal-case.jpg"><meta property="og:type" content="article"><meta property="og:site_name" content="Немного о компьютере"><meta property="og:title" content="Оператор выбора (case)"><meta property="og:description" content="Оператор выбора case осуществляет выполнение определенных действий, напрямую зависящих от значений одной и той же переменной."><script data-ad-client="ca-pub-2348228209994753" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><link rel="stylesheet" async href="https://fortran-new.ru/themes/fortrannew/content/7/all-style.min.css"/>
+<script async src="https://fortran-new.ru/themes/fortrannew/content/7/all-script.min.js" charset="utf-8"></script>
+</head>
+
+
+
+
+     <body>
+  <div class="body_all full_mh full_w body_all_margin">
+    <!-- CONTENT -->
+
+    <div class="panel_accaunt full_w">
+      <div class="mainpagewidth">
+        <div class="panel_accaunt_login float_r"><ul class="panel_yprav_ul full_w"><li class="panel_yprav_li"><a class="panel_yprav_a"  onclick="location.href='https://fortran-new.ru/lcp-admin/';">Личный&nbsp;кабинет</a></li><div class="clear"></div></ul></div>        <!-- <div class="panel_accaunt_login float_r">Личный кабинет</div> -->
+        <div class="clear"></div>
+      </div>
+    </div>
+
+    <header>
+      <div class="header" itemscope itemtype="https://schema.org/WPHeader">
+        <div class="header_table full_w max_width" style="box-sizing:border-box;">
+          <div class="header_title header_padding tabletd align_left valign_middle">
+            <div class="table full_w full_h" style="box-sizing:border-box;">
+              <div class="tabletd full_h valign_bottom" style="box-sizing:border-box;">
+                <a href="https://fortran-new.ru/" rel="home"><img src="/themes/fortran/img/logo48-48.png" width="50px" title="Немного о компьютере" alt="Логотип"></a>
+              </div>
+              <div class="tabletd full_w full_h valign_middle header_title_a_padding" style="box-sizing:border-box;" itemprop="name">
+                <a itemprop="url" href="https://fortran-new.ru/" class="header_title_a" rel="home">
+                  <div class="header_title_h1">
+                  Немного о компьютере                </div>
+              </a>
+              </div>
+            </div>
+          </div>
+          <div class="header_empty header_padding tabletd align_center valign_middle" style="box-sizing:border-box;">
+          </div>
+          <div class="header_mobile_nav header_padding tabletd align_right valign_middle relative display_none">
+            <div class="mobile_nav_button i_block" onclick="mobile_nav_button();">
+            </div>
+          </div>
+          <div class="header_soc_network header_padding tabletd valign_middle relative" style="box-sizing:border-box;">
+            <div class="header_soc_network_one"><a href="https://vk.com/fortrannew" target="_blank" rel="nofollow"><div class="header_soc_network_soc" style="background:url(https://fortran-new.ru/polz/2019/08/soc-vk.jpg);"></div></a></div><div class="header_soc_network_one"><a href="https://fb.me/FortranNew" target="_blank" rel="nofollow"><div class="header_soc_network_soc" style="background:url(https://fortran-new.ru/polz/2019/08/soc-fb.jpg);"></div></a></div><div class="header_soc_network_one"><a href="https://ok.ru/group/56167165591636" target="_blank" rel="nofollow"><div class="header_soc_network_soc" style="background:url(https://fortran-new.ru/polz/2019/11/soc-od.jpg);"></div></a></div><div class="header_soc_network_one"><a href="https://twitter.com/FortranNew" target="_blank" rel="nofollow"><div class="header_soc_network_soc" style="background:url(https://fortran-new.ru/polz/2019/08/soc-tw.jpg);"></div></a></div><div class="header_soc_network_one"><a href="https://www.youtube.com/c/Fortran-newRu?sub_confirmation=1" target="_blank" rel="nofollow"><div class="header_soc_network_soc" style="background:url(https://fortran-new.ru/polz/2019/08/soc-yt.jpg);"></div></a></div>          </div>
+          <!-- <div class="header_buy header_padding tabletd align_right valign_middle">Ваша корзина пуста</div> -->
+        </div>
+      </div>
+    </header>
+
+
+
+
+<nav><div class="nav" itemscope itemtype="https://schema.org/SiteNavigationElement"><div class="max_width"><ul class="menu_ul full_w"><li class="menu_li"><a class="menu_a" itemprop="url" href="https://fortran-new.ru/" rel="home"><span itemprop="name">Главная</span></a></li><li class="menu_li"><a class="menu_a" itemprop="url" href="https://fortran-new.ru/products/" ><span itemprop="name">Товары</span></a></li><li class="menu_li"><a class="menu_a" itemprop="url" href="https://fortran-new.ru/services/" ><span itemprop="name">Услуги</span></a></li><li class="menu_li"><a class="menu_a" itemprop="url" href="https://fortran-new.ru/programmy/" ><span itemprop="name">Программы</span></a></li><li class="menu_li"><a class="menu_a" itemprop="url" href="https://fortran-new.ru/novosti/" ><span itemprop="name">Новости</span></a></li><li class="menu_li"><a class="menu_a" itemprop="url" href="https://fortran-new.ru/kontakty/" ><span itemprop="name">Об авторе</span></a></li><li class="menu_li"><a class="menu_a" itemprop="url" href="https://fortran-new.ru/feeds/" ><span itemprop="name">Узнавайте о новых статьях</span></a></li><div class="clear"></div></ul></div></div><!-- Мобильное меню --><div class="mobile_nav"><div class="mobile_nav_zatemnenie" onclick="mobile_nav_button_close();"></div><ul class="mobile_menu_ul"><li class="mobile_menu_li_button"><div class="mobile_nav_button_close" onclick="mobile_nav_button_close();"></div></li><li class="mobile_menu_li"><a class="mobile_menu_a" href="https://fortran-new.ru/">Главная</a></li><li class="mobile_menu_li"><a class="mobile_menu_a" href="https://fortran-new.ru/products/">Товары</a></li><li class="mobile_menu_li"><a class="mobile_menu_a" href="https://fortran-new.ru/services/">Услуги</a></li><li class="mobile_menu_li"><a class="mobile_menu_a" href="https://fortran-new.ru/programmy/">Программы</a></li><li class="mobile_menu_li"><a class="mobile_menu_a" href="https://fortran-new.ru/novosti/">Новости</a></li><li class="mobile_menu_li"><a class="mobile_menu_a" href="https://fortran-new.ru/kontakty/">Об авторе</a></li><li class="mobile_menu_li"><a class="mobile_menu_a" href="https://fortran-new.ru/feeds/">Узнавайте о новых статьях</a></li></ul></div><!-- End Мобильное меню --></nav><div class="mainpagewidth"><div class="navigation_margin"><div class="titledirect" itemscope="" itemtype="https://schema.org/BreadcrumbList"><span itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem"><a class="lcp_html_navigation_span_a" title="Главная" itemprop="item"  href="/" ><span itemprop="name">Главная</span></a><meta itemprop="position" content="0"></span><span class="lcp_html_navigation_span"> > </span><span itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem"><a class="lcp_html_navigation_span_a" title="Pascal/Delphi" itemprop="item"  href="/pascaldelphi/" ><span itemprop="name">Pascal/Delphi</span></a><meta itemprop="position" content="1"></span><span class="lcp_html_navigation_span"> > </span><span class="lcp_html_navigation_span">Оператор выбора (case)</span></div></div></div><div class="content_all_lcp mainpagewidth_lcp"><div class="sidebar_lcp">
+
+
+
+<aside><div class="rubrik" itemscope itemtype="https://schema.org/WPSideBar"><meta itemprop="name" content="Рубрики"><ul class="rubrik_ul full_w"><li class="rubrik_li"><a class="rubrik_a" href="https://fortran-new.ru/novosti/">Новости</a></li><li class="rubrik_li"><a class="rubrik_a" href="https://fortran-new.ru/rabota-s-kompyuterom/">Компьютерная грамотность</a></li><li class="rubrik_li"><a class="rubrik_a" href="https://fortran-new.ru/sozdanie-i-raskrutka-sajta/">Создание и раскрутка сайта</a></li><li class="rubrik_li"><a class="rubrik_a" href="https://fortran-new.ru/pascaldelphi/">Pascal/Delphi</a></li><li class="rubrik_li"><a class="rubrik_a" href="https://fortran-new.ru/programmy/">Программы</a></li><li class="rubrik_li"><a class="rubrik_a" href="https://fortran-new.ru/sozdanie-muzyki/">Создание музыки</a></li><li class="rubrik_li"><a class="rubrik_a" href="https://fortran-new.ru/remont-kompyuternogo-oborudovaniya/">Ремонт ПК</a></li><div class="clear"></div></ul></div><div class="sidebar_event_all"><div class="sidebar_event_title_all">Ближайшие мероприятия:</div></div><div class="sidebar_ads" itemscope itemtype="https://schema.org/WPAdBlock"><meta itemprop="name" content="Рекомендуем"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- Реклама в боковой колонке -->
+	<ins class="adsbygoogle"
+	style="display:block"
+	data-ad-client="ca-pub-2348228209994753"
+	data-ad-slot="7862199103"
+	data-ad-format="auto"
+	data-full-width-responsive="true"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+		</script></div></aside></div><div class="content_1col_lcp"><div itemscope="" itemtype="https://schema.org/Article"><section><main><div class="bodytitle"><h1 class="titlecontent" itemprop="headline">Оператор выбора (case)</h1><!--<hr noshade size="1" class="hrbodypagetovar"><br>--></div><div class="bodycontent" itemprop="articleBody"><span itemscope="" itemprop="image" itemtype="https://schema.org/ImageObject"><img itemprop="url image" src="https://fortran-new.ru/polz/2019/06/pascal-case.jpg" style="display:none;" alt="Надпись case" title="Оператор выбора в программировании (case)"></span><p>Оператор выбора <span style="color:null">CASE&nbsp;</span>осуществляет выполнение определенных действий, напрямую зависящих от значений одной и той же переменной.</p>
+
+<p>Оператор выбора немного похож на <a href="https://fortran-new.ru/pascaldelphi/uslovnyj-operator-if/" target="_blank">условный оператор (if)</a>, но имеет более легкую структуру. Допустим, есть программа, позволяющая преобразовать поведение (или оценки)&nbsp;учеников в текстовый вид (2-неудовл., 3-плохо, 4-хорошо, 5-отлично). Программа, написанная с помощью условных операторов будет выглядеть следующим образом:</p>
+
+<p><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2348228209994753"
+     data-ad-slot="7939162671"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</p>
+
+<p><code>...<br />
+if&nbsp; <span style="color:null">i</span>=2 then<br />
+writeln(&#39;Неудовлетворительно!&#39;);<br />
+if <span style="color:null">i</span>=3 then<br />
+writeln(&#39;Плохо&#39;);<br />
+if <span style="color:null">i</span>=4 then<br />
+writeln (&#39;Хорошо&#39;);<br />
+if <span style="color:null">i</span>=5 then<br />
+writeln (&#39;Отлично!&#39;);<br />
+...</code></p>
+
+<p>Заметьте, что мы постоянно отслеживаем поведение одной и той же переменной <span style="color:null">i</span>, которая принимает значения от 2 до 5 (в моем случае). Оператор вывода при этом выводит различные значения. Но используя оператор <span style="color:null">CASE</span>, получаем следующий код:</p>
+
+<p><code>...<br />
+<span style="color:null">case i</span> <span style="color:null">of</span><br />
+2: writeln(&#39;Неудовлетворительно!&#39;);<br />
+3: writeln(&#39;Плохо&#39;);<br />
+4: writeln (&#39;Хорошо&#39;);<br />
+5: writeln (&#39;Отлично!&#39;);<br />
+<span style="color:null">end;</span><br />
+...</code></p>
+
+<p>Как видно, сразу после <span style="color:null">CASE&nbsp;</span>ставится переменная (<span style="color:null">i</span>) и <span style="color:null">OF</span>. После <span style="color:null">CASE BEGIN&nbsp;</span>ставить не нужно, даже если необходимо сделать множество выборов для переменной. Затем пишем значение, которое может принимать переменная, ставим знак двоеточия (<span style="color:null">:</span>) и описываем дальнейшие действия. Если нужно прописать не одно, а несколько действий, то ставим <span style="color:null">BEGIN,&nbsp;</span>и прописываем все эти действия, после которых обязательно ставим <span style="color:null">END;</span>. Оператор выбора тоже всегда закрывается <span style="color:null">END;</span>. Тип переменной <span style="color:null">(i)</span> не обязательно должен быть именно INTEGER. Какие еще существуют типы, мы узнаем немного позднее.</p>
+
+<p>Таким образом все дальнейшие действия программы будут зависеть от значений переменной. Следующий код показывает каким образом можно выполнить одно и то же действие для определенного диапазона или отдельных значений переменной:</p>
+
+<p><code>...<br />
+case i of<br />
+1..5: writeln(&#39;Выполняется для значений i от 1 до 5&#39;);<br />
+6,7, 10: writeln(&#39;Выполняется при значении i равным 10, 13 и 14&#39;);<br />
+8..9: writeln(&#39;Выполняется для значений i от 8 до 9&#39;); {В этом выражении<br />
+значения переменной можно взять через запятую: 8,9}<br />
+end;<br />
+...</code></p>
+
+<p><strong><u>Задания:</u></strong></p>
+
+<ul>
+	<li><strong>Написать программу, отображающую на экране времена года, при вводе номера месяца.</strong></li>
+	<li><strong>Написать программу преобразования цифр (0-10) в слова.</strong></li>
+	<li><strong>Составить программу, которая меняла бы окончания, в зависимости от возраста человека (&quot;мне 1 год&quot;, &quot;мне 4 года&quot;, &quot;мне 75 лет&quot;).</strong></li>
+</ul>
+
+<p style="text-align:center"><iframe width="100%" height="415" class="yytt" src="https://www.youtube.com/embed/BR0k8U1cPzs" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></p>
+
+<p style="text-align:center"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2348228209994753"
+     data-ad-slot="7939162671"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</p>
+
+<hr />
+<p>Ответы к заданиям предыдущей статьи:</p>
+
+<ul>
+	<li>Определить, является ли число k четным и вывести значение &quot;истина&quot; или &quot;ложь&quot;.</li>
+</ul>
+
+<p style="text-align:center"><img alt="Определение четного числа на Pascal" src="https://fortran-new.ru/polz/2018/06/opredelenie-chetnogo-chisla-na-pascal.jpg" style="max-width:109px; width:100%" title="Определение четного числа на Pascal" /></p>
+
+<p>Чтобы определить, является ли число четным, либо делится ли оно на три, пять, семь и т.д., нужно чтобы остаток от деления на эти числа равнялся нулю!</p>
+
+<ul>
+	<li>Проверить, равны ли суммы первых двух и последних двух цифр четырехзначного числа x.</li>
+</ul>
+
+<p>Эта программа имеет множество решений. Вот одно из них:</p>
+
+<p style="text-align:center"><img alt="Pascal Равны ли суммы двух первых и двух последних цифр числа" src="https://fortran-new.ru/polz/2018/06/pascal-ravny-li-summy-dvux-pervyx-i-dvux-poslednix-cifr-chisla.jpg" style="max-width:222px; width:100%" title="Pascal Равны ли суммы двух первых и двух последних цифр числа" /></p>
+
+<p>В данном примере в переменной A&nbsp;хранится введенное число (например 5348).</p>
+
+<p>Далее переменная B&nbsp;присваивает значение деления переменной A&nbsp;на 1000 (5348/1000=5, остаток откидываем). Таким образом найдено первое число.</p>
+
+<p>Затем переменная C&nbsp;присваивает значение более сложной операции. Вначале мы вычитаем из введенного нами числа полученное число B, умноженное на 1000 (5348-5*1000=5348-5000=348). Полученный результат делим нацело на 100 (348/100=3).</p>
+
+<p>У нас уже есть два числа.</p>
+
+<p>Третье число находится в переменной D. Сначала мы отнимаем из введенного числа (5348) первое полученное число, увеличенное в тысячу раз, а затем и полученное второе число, увеличенное в сто раз (5348-5*1000-3*100=5348-5000-300=348-300=48) и делим нацело на 10 (48/10=4). Четвертое число (в переменной E), находится таким же образом. Чтобы понять схему нахождения данных цифр&nbsp;числа, давайте разложим число 5348 на&nbsp;слагаемые: 5000+300+40+8. Как найти из таких простых чисел первую цифру числа, я думаю проблем не возникнет. Если задача по нахождению отдельных цифр числа до сих не понятна, попробуйте взять листочек бумаги, ручку и вместо переменной A&nbsp;подставить любое четырехзначное число. А дальше - чистая математика. Подставляем все значения в переменные и получаем готовые ответы. Дальше задания будут усложняться, именно поэтому очень важно на листке бумаги все заранее продумать, просчитать, и только после этого переписывать полученное решение в Паскаль.</p>
+
+<p>Следующая часть кода находит сумму двух первых и последних цифр числа, сравнивает и, если сумма равна, то выведет TRUE, а если же нет - то выведет FALSE. Например для чисел 5216, 1423, 9155, 1221 выведет TRUE, а для 7891, 1333, 5641, 9147 выведет FALSE.</p>
+
+<ul>
+	<li>Есть три числа. Расположить их в порядке возрастания и проверить между собой на совпадение.</li>
+</ul>
+
+<p style="text-align:center"><img alt="Сортировка чисел в Pascal" src="https://fortran-new.ru/polz/2018/06/sortirovka-chisel-v-pascal.jpg" style="max-width:234px; width:100%" title="Сортировка чисел в Pascal" /></p>
+
+<p>Хочу отметить, что комментарии, записанные в фигурных скобках, Pascal автоматически пропускает. В основном они очень важны для того, чтобы не забыть о том, что выполняет программа на данном промежутке кода. Можно неделю или максимум месяц не забыть, но потом не только Вам, но и любому другому программисту станет гораздо тяжелее разобраться в Вашей программе.</p>
+
+<p>Чтобы программы не занимали слишком много места на жестком диске и в оперативной памяти, следует искать более короткие решения программы. Например, можно вместо (A</p>
+
+<p>Теперь объясню о ходе решения данной задачи. Вначале проверяем, есть ли совпадения чисел A,B,C. Если хотя бы одно из них совпадет с другим, то записываем в переменную BOL (название переменной может содержать несколько символов латинского алфавита, цифры и подчеркивание. Более подробнее об этом рассказывалось в статье <a href="https://fortran-new.ru/pascaldelphi/znakomstvo-s-turbo-pascal/" target="_blank">Знакомство с Turbo Pascal</a>)&nbsp;значение TRUE, в остальных случаях - FALSE. Дальше проверяем каждое число по отдельности. Можно даже эту программу записать в виде блок схемы. Но ее мы будем учиться составлять немного позднее. Здесь никаких хитростей нет (хотя можно было бы их добавить), поэтому разобраться в ней совершенно не сложно.</p>
+
+<hr />
+<p style="text-align:center"><strong><a href="https://fortran-new.ru/pascaldelphi/logika/" title="Логика">&lt;&lt;Предыдущая статья</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://fortran-new.ru/pascaldelphi/operator-povtora-cikly-for-repeat-while/" title="Оператор повтора — циклы (for, repeat, while)">Следующая статья &gt;&gt;</a></strong></p>
+<span itemscope="" itemtype="https://schema.org/VideoObject"><meta itemprop="name" content="Оператор выбора в Pascal (case) - 06"/><meta itemprop="description" content="Краткий видеокурс, позволяющий научиться программировать на языке Pascal. Оператор выбора немного похож на условный оператор (if), но имеет более легкую стру..."/><span itemprop="thumbnail" itemscope itemtype="http://schema.org/ImageObject"> <link itemprop="contentUrl" href="https://i.ytimg.com/vi/BR0k8U1cPzs/maxresdefault.jpg"/></span><link itemprop="thumbnailUrl" href="https://i.ytimg.com/vi/BR0k8U1cPzs/maxresdefault.jpg"/><meta itemprop="uploadDate" content="2016-01-09"/><meta itemprop="duration" content="PT26M29S"/><link itemprop="embedUrl" href="https://www.youtube.com/embed/BR0k8U1cPzs"/><meta itemprop="isFamilyFriendly" content="true"/><link itemprop="url" href="https://fortran-new.ru/pascaldelphi/operator-vybora-case/"/></span><p class="spandateresstatei">Опубликовано: <span itemprop="datePublished">2011-11-20 16:17:38</span><meta itemprop="dateModified" content="2019-09-02 03:37:42"></p></div><div class="pohogie_articles_block_title">Читайте также:</div><div class="pohogie_articles_block_all"><div class="blockrubrcategor"><a class="blockrubrcategor_a" href="https://fortran-new.ru/pascaldelphi/znakomstvo-s-turbo-pascal/"><div class="blockrubrcategor_img_div"><div class="blockrubrcategor_img" style="background:url( https://fortran-new.ru/polz/2019/05/struktura-programmy-na-pascal-1.jpg );"></div></div><div class="blockrubrcategor_title_tbl"><div class="blockrubrcategor_title_td"><div class="blockrubrcategor_title">Знакомство с Turbo Pascal</div></div></div><div class="blockrubrcategor_next_div"><div class="blockrubrcategor_next">Читать далее</div></div></a></div><div class="blockrubrcategor"><a class="blockrubrcategor_a" href="https://fortran-new.ru/pascaldelphi/logika/"><div class="blockrubrcategor_img_div"><div class="blockrubrcategor_img" style="background:url( https://fortran-new.ru/polz/2019/06/pascal-bool.jpg );"></div></div><div class="blockrubrcategor_title_tbl"><div class="blockrubrcategor_title_td"><div class="blockrubrcategor_title">Логика</div></div></div><div class="blockrubrcategor_next_div"><div class="blockrubrcategor_next">Читать далее</div></div></a></div><div class="blockrubrcategor"><a class="blockrubrcategor_a" href="https://fortran-new.ru/pascaldelphi/operator-povtora-cikly-for-repeat-while/"><div class="blockrubrcategor_img_div"><div class="blockrubrcategor_img" style="background:url( https://fortran-new.ru/polz/2019/06/pascal-for-while-repeat.jpg );"></div></div><div class="blockrubrcategor_title_tbl"><div class="blockrubrcategor_title_td"><div class="blockrubrcategor_title">Оператор повтора — циклы (for, repeat, while)</div></div></div><div class="blockrubrcategor_next_div"><div class="blockrubrcategor_next">Читать далее</div></div></a></div></div><div class="pohogie_products_block_title">Заказывайте товары и услуги:</div><div class="pohogie_products_block_all"><div class="blockrubrcategor"><a class="blockrubrcategor_a" href="https://fortran-new.ru/products/pascal-yazyk-programmirovaniya/"><div class="blockrubrcategor_img_div"><div class="blockrubrcategor_img" style="background:url( https://fortran-new.ru/polz/2019/08/dvd-pascal.jpg );"></div></div><div class="blockrubrcategor_title_tbl"><div class="blockrubrcategor_title_td"><div class="blockrubrcategor_title">Pascal - Язык программирования</div></div></div><div class="blockrubrcategor_cena_div"><div class="blockrubrcategor_cena">1 200 руб.</div></div><div class="blockrubrcategor_next_div"><div class="blockrubrcategor_next">Подробнее</div></div></a></div><div class="blockrubrcategor"><a class="blockrubrcategor_a" href="https://fortran-new.ru/products/programmirovanie-pascal/"><div class="blockrubrcategor_img_div"><div class="blockrubrcategor_img" style="background:url( https://fortran-new.ru/polz/2019/08/kniga-programmirovanie-paskal.jpg );"></div></div><div class="blockrubrcategor_title_tbl"><div class="blockrubrcategor_title_td"><div class="blockrubrcategor_title">Программирование — Pascal</div></div></div><div class="blockrubrcategor_cena_div"><div class="blockrubrcategor_cena">300 руб.</div></div><div class="blockrubrcategor_next_div"><div class="blockrubrcategor_next">Подробнее</div></div></a></div><div class="blockrubrcategor"><a class="blockrubrcategor_a" href="https://fortran-new.ru/products/kniga-bystroe-sozdanie-saytov-v-internete/"><div class="blockrubrcategor_img_div"><div class="blockrubrcategor_img" style="background:url( https://fortran-new.ru/polz/2019/08/kniga-bystroe-sozdanie-saytov.jpg );"></div></div><div class="blockrubrcategor_title_tbl"><div class="blockrubrcategor_title_td"><div class="blockrubrcategor_title">Быстрое создание сайтов в Интернете</div></div></div><div class="blockrubrcategor_cena_div"><div class="blockrubrcategor_cena">150 руб.</div></div><div class="blockrubrcategor_next_div"><div class="blockrubrcategor_next">Подробнее</div></div></a></div></div><div class="pohogie_ads_block_all_tbl"><div class="block_ads_td"><div class="block_ads"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- Похожая реклама (под статьями) 1 --><ins class="adsbygoogle"style="display:inline-block;width:260px;height:260px"data-ad-client="ca-pub-2348228209994753"data-ad-slot="1388070268"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div><div class="block_ads_td"><div class="block_ads"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- Похожая реклама (под статьями) 2 --><ins class="adsbygoogle"style="display:inline-block;width:260px;height:260px"data-ad-client="ca-pub-2348228209994753"data-ad-slot="6012537527"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div><div class="block_ads_td"><div class="block_ads"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- Похожая реклама (под статьями) 3 --><ins class="adsbygoogle"style="display:inline-block;width:260px;height:260px"data-ad-client="ca-pub-2348228209994753"data-ad-slot="5085989737"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div><hr><div><div class="comment_main_title">Комментарии (<span itemprop="commentCount">1</span>)</div><div class="comment_add_button" onclick="message_LCP('Чтобы оставить комментарий, необходимо войти на сайт!','false');">Оставить комментарий</div><div class="comment_all"><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" style="background:url(https://fortran-new.ru/polz/2019/07/e3cdf7fbe5f2d4b75dda3822890261b.jpg);"></div></div><div class="comment_block_td comment_author" itemprop="creator">Татьяна Чубатая</div></div><div class="comment_description" itemprop="text">Иван, приветствую! Добро пожаловать за наградой! Переходной Кубок признания! Получите его.</div><div class="comment_dater" itemprop="datePublished">2011-11-24 11:14:51</div></div></div></div></main></section><meta itemprop="identifier" content="1573"><meta itemprop="mainEntityOfPage" content="https://fortran-new.ru/pascaldelphi/operator-vybora-case/"><meta itemprop="author" content="Иван Горячкин"><meta itemprop="description" content="Оператор выбора case осуществляет выполнение определенных действий, напрямую зависящих от значений одной и той же переменной."><div itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization"><div itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject"><img itemprop="url image" src="https://fortran-new.ru/themes/fortrannew/img/logo48-48.png" style="display:none;"><meta itemprop="width" content="48"><meta itemprop="height" content="48"></div><meta itemprop="name" content="Немного о компьютере"><meta itemprop="address" content="Россия"><meta itemprop="telephone" content=""></div></div></div><div class="clear"></div></div><!-- END CONTENT -->
+<div class="body_space"><!-- NO TEXT --></div>
+</div>
+
+<footer class="full_w">
+<!-- FOOTER -->
+<div class="footer full_w" itemscope itemtype="https://schema.org/WPFooter">
+  <div class="mainpagewidth table full_w">
+    <div class="tabletd align_left valign_middle">
+      <div class="footer_text_left">
+        Все права защищены &copy; <span itemprop="copyrightYear">2011</span>-2022 <span itemprop="name">FORTRAN NEW company</span><br>
+              </div>
+    </div>
+    <div class="tabletd align_right valign_middle">
+      <div class="footer_text_right i_block">
+                <div class="footer_text_right_div">Автор сайта: Иван Горячкин</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END FOOTER -->
+</footer>
+<!-- Top100 (Kraken) Counter -->
+<script>
+    (function (w, d, c) {
+    (w[c] = w[c] || []).push(function() {
+        var options = {
+            project: 2731383,
+        };
+        try {
+            w.top100Counter = new top100(options);
+        } catch(e) { }
+    });
+    var n = d.getElementsByTagName("script")[0],
+    s = d.createElement("script"),
+    f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src =
+    (d.location.protocol == "https:" ? "https:" : "http:") +
+    "//st.top100.ru/top100/top100.js";
+
+    if (w.opera == "[object Opera]") {
+    d.addEventListener("DOMContentLoaded", f, false);
+} else { f(); }
+})(window, document, "_top100q");
+</script>
+<noscript>
+  <img src="//counter.rambler.ru/top100.cnt?pid=2731383" alt="Топ-100" />
+</noscript>
+<!-- END Top100 (Kraken) Counter -->
+
+
+
+
+
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "2211043", type: "pageView", start: (new Date()).getTime()});
+(function (d, w, id) {
+  if (d.getElementById(id)) return;
+  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+  ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "topmailru-code");
+</script><noscript><div>
+<img src="//top-fwz1.mail.ru/counter?id=2211043;js=na" style="border:0;position:absolute;left:-9999px;" alt="" />
+</div></noscript>
+<!-- //Rating@Mail.ru counter -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(19020424, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/19020424" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+
+
+
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-23478051-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+<!--LiveInternet counter--><script type="text/javascript">
+new Image().src = "//counter.yadro.ru/hit?r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,150))+
+";"+Math.random();</script><!--/LiveInternet--><!-- Сообщения с ошибками -->
+<div class="message_error_div" id="message_error_div"></div>
+<!-- End Сообщения с ошибками -->
+</body></html>

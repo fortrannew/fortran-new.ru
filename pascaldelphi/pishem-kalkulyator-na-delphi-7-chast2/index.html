@@ -1,0 +1,990 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Пишем калькулятор на Delphi 7 (часть2)</title>
+<meta name="description" content="Вторая часть по программированию основных кнопок стандартного калькулятора с помощью Borland Delphi 7">
+<meta name="keywords" content="Создание калькулятора, разработка калькулятора, написание калькулятора, Delphi, программирование калькулятора, сделать калькулятор">
+<link rel="stylesheet" href="https://fortran-new.ru/themes/fortrannew/style.min.css" type="text/css"/>
+<link rel="stylesheet" async href="https://fortran-new.ru/admin/style-structure.min.css" type="text/css"/>
+<link rel="stylesheet" async href="https://fortran-new.ru/admin/style-panelaccaunt.css" type="text/css"/>
+<link rel="stylesheet" async href="https://fortran-new.ru/autorization/style.css" type="text/css"/>
+<link rel="stylesheet" async href="https://fortran-new.ru/includes/messages/messages.min.css" type="text/css"/>
+<script async src="https://fortran-new.ru/themes/fortrannew/scripter.min.js"></script>
+<script async src="https://fortran-new.ru/autorization/script-popup.js"></script>
+<script async src="https://fortran-new.ru/admin/scripter.min.js"></script>
+<script async src="https://fortran-new.ru/includes/messages/messages.min.js"></script>
+<link rel="canonical" href="https://fortran-new.ru/pascaldelphi/pishem-kalkulyator-na-delphi-7-chast2/"/>
+<link rel="stylesheet" async href="https://fortran-new.ru/themes/fortrannew/mobile.css?ver=2022-06-30-09-28-12"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="image/x-icon" href="https://fortran-new.ru/themes/fortrannew/img/logo16-16-24b.ico"/><link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://fortran-new.ru/themes/fortrannew/img/logo16-16-24b.ico"/><link rel="icon" type="image/png" sizes="16x16" href="https://fortran-new.ru/themes/fortrannew/img/logo16-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://fortran-new.ru/themes/fortrannew/img/logo32-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="https://fortran-new.ru/themes/fortrannew/img/logo48-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fortran-new.ru/themes/fortrannew/img/logo192-192.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://fortran-new.ru/themes/fortrannew/img/logo76-76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://fortran-new.ru/themes/fortrannew/img/logo120-120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://fortran-new.ru/themes/fortrannew/img/logo152-152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://fortran-new.ru/themes/fortrannew/img/logo180-180.png">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0d6780"><meta name="msapplication-TileColor" content="#d5ffff"><meta name="msapplication-TileImage" content="https://fortran-new.ru/themes/fortrannew/img/logo144-144.png"><meta name="theme-color" content="#00c0ff"><script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "WebSite",        "potentialAction": {
+"@type": "SearchAction",
+"target": "https://fortran-new.ru/search?search_str={search_term}",
+"query-input": "required name=search_term"
+},		  "url": "https://fortran-new.ru/"
+}
+</script>
+<meta property="og:url" content="https://fortran-new.ru/pascaldelphi/pishem-kalkulyator-na-delphi-7-chast2/"><meta property="og:image" content="https://fortran-new.ru/polz/2018/06/kalkulyator-na-delphi.jpg"><meta property="og:type" content="article"><meta property="og:site_name" content="Немного о компьютере"><meta property="og:title" content="Пишем калькулятор на Delphi 7 (часть2)"><meta property="og:description" content="Вторая часть по программированию основных кнопок стандартного калькулятора с помощью Borland Delphi 7"><script data-ad-client="ca-pub-2348228209994753" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><link rel="stylesheet" async href="https://fortran-new.ru/themes/fortrannew/content/7/all-style.min.css"/>
+<script async src="https://fortran-new.ru/themes/fortrannew/content/7/all-script.min.js" charset="utf-8"></script>
+</head>
+
+
+
+
+     <body>
+  <div class="body_all full_mh full_w body_all_margin">
+    <!-- CONTENT -->
+
+    <div class="panel_accaunt full_w">
+      <div class="mainpagewidth">
+        <div class="panel_accaunt_login float_r"><ul class="panel_yprav_ul full_w"><li class="panel_yprav_li"><a class="panel_yprav_a"  onclick="location.href='https://fortran-new.ru/lcp-admin/';">Личный&nbsp;кабинет</a></li><div class="clear"></div></ul></div>        <!-- <div class="panel_accaunt_login float_r">Личный кабинет</div> -->
+        <div class="clear"></div>
+      </div>
+    </div>
+
+    <header>
+      <div class="header" itemscope itemtype="https://schema.org/WPHeader">
+        <div class="header_table full_w max_width" style="box-sizing:border-box;">
+          <div class="header_title header_padding tabletd align_left valign_middle">
+            <div class="table full_w full_h" style="box-sizing:border-box;">
+              <div class="tabletd full_h valign_bottom" style="box-sizing:border-box;">
+                <a href="https://fortran-new.ru/" rel="home"><img src="/themes/fortran/img/logo48-48.png" width="50px" title="Немного о компьютере" alt="Логотип"></a>
+              </div>
+              <div class="tabletd full_w full_h valign_middle header_title_a_padding" style="box-sizing:border-box;" itemprop="name">
+                <a itemprop="url" href="https://fortran-new.ru/" class="header_title_a" rel="home">
+                  <div class="header_title_h1">
+                  Немного о компьютере                </div>
+              </a>
+              </div>
+            </div>
+          </div>
+          <div class="header_empty header_padding tabletd align_center valign_middle" style="box-sizing:border-box;">
+          </div>
+          <div class="header_mobile_nav header_padding tabletd align_right valign_middle relative display_none">
+            <div class="mobile_nav_button i_block" onclick="mobile_nav_button();">
+            </div>
+          </div>
+          <div class="header_soc_network header_padding tabletd valign_middle relative" style="box-sizing:border-box;">
+            <div class="header_soc_network_one"><a href="https://vk.com/fortrannew" target="_blank" rel="nofollow"><div class="header_soc_network_soc" style="background:url(https://fortran-new.ru/polz/2019/08/soc-vk.jpg);"></div></a></div><div class="header_soc_network_one"><a href="https://fb.me/FortranNew" target="_blank" rel="nofollow"><div class="header_soc_network_soc" style="background:url(https://fortran-new.ru/polz/2019/08/soc-fb.jpg);"></div></a></div><div class="header_soc_network_one"><a href="https://ok.ru/group/56167165591636" target="_blank" rel="nofollow"><div class="header_soc_network_soc" style="background:url(https://fortran-new.ru/polz/2019/11/soc-od.jpg);"></div></a></div><div class="header_soc_network_one"><a href="https://twitter.com/FortranNew" target="_blank" rel="nofollow"><div class="header_soc_network_soc" style="background:url(https://fortran-new.ru/polz/2019/08/soc-tw.jpg);"></div></a></div><div class="header_soc_network_one"><a href="https://www.youtube.com/c/Fortran-newRu?sub_confirmation=1" target="_blank" rel="nofollow"><div class="header_soc_network_soc" style="background:url(https://fortran-new.ru/polz/2019/08/soc-yt.jpg);"></div></a></div>          </div>
+          <!-- <div class="header_buy header_padding tabletd align_right valign_middle">Ваша корзина пуста</div> -->
+        </div>
+      </div>
+    </header>
+
+
+
+
+<nav><div class="nav" itemscope itemtype="https://schema.org/SiteNavigationElement"><div class="max_width"><ul class="menu_ul full_w"><li class="menu_li"><a class="menu_a" itemprop="url" href="https://fortran-new.ru/" rel="home"><span itemprop="name">Главная</span></a></li><li class="menu_li"><a class="menu_a" itemprop="url" href="https://fortran-new.ru/products/" ><span itemprop="name">Товары</span></a></li><li class="menu_li"><a class="menu_a" itemprop="url" href="https://fortran-new.ru/services/" ><span itemprop="name">Услуги</span></a></li><li class="menu_li"><a class="menu_a" itemprop="url" href="https://fortran-new.ru/programmy/" ><span itemprop="name">Программы</span></a></li><li class="menu_li"><a class="menu_a" itemprop="url" href="https://fortran-new.ru/novosti/" ><span itemprop="name">Новости</span></a></li><li class="menu_li"><a class="menu_a" itemprop="url" href="https://fortran-new.ru/kontakty/" ><span itemprop="name">Об авторе</span></a></li><li class="menu_li"><a class="menu_a" itemprop="url" href="https://fortran-new.ru/feeds/" ><span itemprop="name">Узнавайте о новых статьях</span></a></li><div class="clear"></div></ul></div></div><!-- Мобильное меню --><div class="mobile_nav"><div class="mobile_nav_zatemnenie" onclick="mobile_nav_button_close();"></div><ul class="mobile_menu_ul"><li class="mobile_menu_li_button"><div class="mobile_nav_button_close" onclick="mobile_nav_button_close();"></div></li><li class="mobile_menu_li"><a class="mobile_menu_a" href="https://fortran-new.ru/">Главная</a></li><li class="mobile_menu_li"><a class="mobile_menu_a" href="https://fortran-new.ru/products/">Товары</a></li><li class="mobile_menu_li"><a class="mobile_menu_a" href="https://fortran-new.ru/services/">Услуги</a></li><li class="mobile_menu_li"><a class="mobile_menu_a" href="https://fortran-new.ru/programmy/">Программы</a></li><li class="mobile_menu_li"><a class="mobile_menu_a" href="https://fortran-new.ru/novosti/">Новости</a></li><li class="mobile_menu_li"><a class="mobile_menu_a" href="https://fortran-new.ru/kontakty/">Об авторе</a></li><li class="mobile_menu_li"><a class="mobile_menu_a" href="https://fortran-new.ru/feeds/">Узнавайте о новых статьях</a></li></ul></div><!-- End Мобильное меню --></nav><div class="mainpagewidth"><div class="navigation_margin"><div class="titledirect" itemscope="" itemtype="https://schema.org/BreadcrumbList"><span itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem"><a class="lcp_html_navigation_span_a" title="Главная" itemprop="item"  href="/" ><span itemprop="name">Главная</span></a><meta itemprop="position" content="0"></span><span class="lcp_html_navigation_span"> > </span><span itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem"><a class="lcp_html_navigation_span_a" title="Pascal/Delphi" itemprop="item"  href="/pascaldelphi/" ><span itemprop="name">Pascal/Delphi</span></a><meta itemprop="position" content="1"></span><span class="lcp_html_navigation_span"> > </span><span class="lcp_html_navigation_span">Пишем калькулятор на Delphi 7 (часть2)</span></div></div></div><div class="content_all_lcp mainpagewidth_lcp"><div class="sidebar_lcp">
+
+
+
+<aside><div class="rubrik" itemscope itemtype="https://schema.org/WPSideBar"><meta itemprop="name" content="Рубрики"><ul class="rubrik_ul full_w"><li class="rubrik_li"><a class="rubrik_a" href="https://fortran-new.ru/novosti/">Новости</a></li><li class="rubrik_li"><a class="rubrik_a" href="https://fortran-new.ru/rabota-s-kompyuterom/">Компьютерная грамотность</a></li><li class="rubrik_li"><a class="rubrik_a" href="https://fortran-new.ru/sozdanie-i-raskrutka-sajta/">Создание и раскрутка сайта</a></li><li class="rubrik_li"><a class="rubrik_a" href="https://fortran-new.ru/pascaldelphi/">Pascal/Delphi</a></li><li class="rubrik_li"><a class="rubrik_a" href="https://fortran-new.ru/programmy/">Программы</a></li><li class="rubrik_li"><a class="rubrik_a" href="https://fortran-new.ru/sozdanie-muzyki/">Создание музыки</a></li><li class="rubrik_li"><a class="rubrik_a" href="https://fortran-new.ru/remont-kompyuternogo-oborudovaniya/">Ремонт ПК</a></li><div class="clear"></div></ul></div><div class="sidebar_event_all"><div class="sidebar_event_title_all">Ближайшие мероприятия:</div></div><div class="sidebar_ads" itemscope itemtype="https://schema.org/WPAdBlock"><meta itemprop="name" content="Рекомендуем"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- Реклама в боковой колонке -->
+	<ins class="adsbygoogle"
+	style="display:block"
+	data-ad-client="ca-pub-2348228209994753"
+	data-ad-slot="7862199103"
+	data-ad-format="auto"
+	data-full-width-responsive="true"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+		</script></div></aside></div><div class="content_1col_lcp"><div itemscope="" itemtype="https://schema.org/Article"><section><main><div class="bodytitle"><h1 class="titlecontent" itemprop="headline">Пишем калькулятор на Delphi 7 (часть2)</h1><!--<hr noshade size="1" class="hrbodypagetovar"><br>--></div><div class="bodycontent" itemprop="articleBody"><span itemscope="" itemprop="image" itemtype="https://schema.org/ImageObject"><img itemprop="url image" src="https://fortran-new.ru/polz/2018/06/kalkulyator-na-delphi.jpg" style="display:none;" alt="Фото стандартного калькулятора на делфи" title="Delphi - калькулятор"></span><p>Итак, интерфейс калькулятора у нас готов, переходим к более сложному процессу - программированию. Как вы уже догадались, калькулятор был сделан динамически (т.е. программным способом). Соответственно все события нам придется объявить в начале программы, и затем уже связать их с элементами управления калькулятора.</p>
+
+<p><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2348228209994753"
+     data-ad-slot="7939162671"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</p>
+
+<p>Для этого найдем в начале программы ключевое слово <strong>private</strong>. После него добавляем следующую процедуру:</p>
+
+<p><code><strong>procedure Button1Click (Sender: TObject);</strong></code></p>
+
+<p>Нажимаем горячие клавиши CTRL+SHIFT+C и программа Delphi нам автоматически прописывает следующие строки:</p>
+
+<p><code><strong>procedure TForm1.Button1Click (Sender: TObject);</strong><br />
+<strong>begin</strong><br />
+<br />
+<strong>end;</strong></code></p>
+
+<p>Данная процедура будет выводить на экран калькулятора все нажатые цифры. Если вспомнить, из<a href="https://fortran-new.ru/pascaldelphi/pishem-kalkulyator-na-delphi-7-chast1/" target="_blank" title="Пишем калькулятор на Delphi 7 (часть1)"> предыдущей статьи</a> мы для упрощения программирования сделали массив кнопок от 0 до 9. Однако возникает вопрос: по какой именно кнопке мы нажали? Как ее отловить? Для этого пропишем следующие строки:</p>
+
+<p><code>(Sender as TButton).Tag := 1;<br />
+for i:=0 to 9 do<br />
+if button[i].Tag = 1 then<br />
+begin<br />
+button[i].Tag := 0;<br />
+break;<br />
+end;</code></p>
+
+<p>Соответственно при нажатии на неизвестную клавишу, мы присваиваем в поле <strong>Tag </strong>единицу. Затем с помощью цикла мы проверяем, какой из объектов содержит в свойстве <strong>Tag</strong> единицу. И таким образом мы находим номер нашей кнопки. Чтобы далее не перебирать все возможные варианты (мы же итак нашли необходимый объект), мы ставим функцию <strong>Brea</strong>k и цикл прерывается.</p>
+
+<p>Обязательно после объявления процедуры (<strong>procedure TForm1.Button1Click(Sender: TObject);</strong>) и перед началом самой процедуры (<strong>Begin</strong>), объявим новую переменную <strong>i </strong>и присвоим ей тип <strong>integer</strong>:</p>
+
+<p><code><strong>var i:integer;</strong></code></p>
+
+<p>Дальше смотрим, нажимали ли мы на какую-нибудь кнопку с операциями сложения, вычитания, умножения или деления, и соответственно очищаем экран, а затем с самого начала записываем цифры. Если же нажатий на эти кнопки не было - тогда просто дописываем к предыдущей цифре ту, которую мы только что нажали. Для этого нам понадобится какая-то переменная. Пусть это будет <strong>pamyatstiraniya</strong>. Опишем ее в начале программы перед <strong>implementation</strong>:</p>
+
+<p><code><strong>pamyatstiraniya: string;</strong></code></p>
+
+<p>Соответственно, нам понадобится еще одна переменная, которая хранила бы операции (+,-,*,/), и третья, которая хранила бы число, пока мы записываем новое:</p>
+
+<p><code><strong>pamyatoperacii: string;<br />
+pamyatchisla1: string;</strong></code></p>
+
+<p>Тогда в процедуре (<strong>procedure TForm1.Button1Click (Sender: TObject);</strong>) пропишем следующие условия:</p>
+
+<p><code>if pamyatstiraniya = &#39;Надо очистить экран&#39; then<br />
+Begin<br />
+Edit.Text := &#39;&#39;;<br />
+pamyatstiraniya := &#39;&#39;;<br />
+end;<br />
+if Edit.Text = &#39;0&#39; then<br />
+Edit.Text := inttostr(i)<br />
+else<br />
+Edit.Text := Edit.Text + inttostr(i);</code></p>
+
+<p>Другими словами, если мы нажали на какой-то знак +,-,*,/ - у нас в переменную <strong>pamyatstiraniya</strong> появилось сообщение, что надо очистить экран перед тем, как записать новую цифру. Дальше если у нас на экране отображался 0 - нужно эту цифру заменить на новую. И если на экране уже были цифры - их просто дописываем справа.</p>
+
+<p>Процедура полностью готова к работе, но если запустить калькулятор - цифры не отображаются. Почему? Дело в том, что мы еще не связали наши кнопки 0-9 с данной процедурой. Поэтому при создании формы (<strong>procedure TForm1.FormCreate(Sender: TObject);</strong>) допишем следующие строчки:</p>
+
+<p><code>for i:=0 to 9 do<br />
+button[i].OnClick := Button1Click;</code></p>
+
+<p>Запускаем калькулятор и наслаждаемся вводом цифр!</p>
+
+<p>Всё было бы отлично, если бы не бесконечный ввод чисел. Поэтому давайте таким же образом сделаем операции сложения, вычитания, умножения и деления. В&nbsp;<strong>private</strong> пишем:</p>
+
+<p><code><strong>procedure Operaciya (Sender: TObject);</strong></code></p>
+
+<p>Нажимаем CTRL+SHIFT+C и в ней пишем следующее:</p>
+
+<p><code>var i:integer;<br />
+begin<br />
+if sender.ClassType = TButton then<br />
+(Sender as TButton).Tag := 1;<br />
+for i:=13 to 19 do<br />
+if button[i].Tag = 1 then<br />
+begin<br />
+button[i].Tag := 0;<br />
+break;<br />
+end;<br />
+case i of<br />
+13: pamyatoperacii := &#39;+&#39;;<br />
+15: pamyatoperacii := &#39;-&#39;;<br />
+17: pamyatoperacii := &#39;*&#39;;<br />
+19: pamyatoperacii := &#39;/&#39;;<br />
+end;<br />
+pamyatstiraniya := &#39;Надо очистить экран&#39;;<br />
+end;</code></p>
+
+<p>Здесь самое главное занести в переменную&nbsp;<strong>pamyatoperacii</strong> необходимый знак нашей операции (что мы будем дальше делать с выражением). Однако при выполнении операции несколько раз было бы хорошо показать пользователю результаты вычислений.</p>
+
+<p>Добавим новую процедуру:</p>
+
+<p><code><strong>procedure Resultat (Sender: TObject);</strong></code></p>
+
+<p>И в ней как раз и будем производить вычисления, а затем результат - выводить на экран:</p>
+
+<p><code>if pamyatoperacii = &#39;+&#39; then<br />
+Edit.Text := FloatToStr (StrToFloat (pamyatchisla1) + StrToFloat (Edit.Text));<br />
+if pamyatoperacii = &#39;-&#39; then<br />
+Edit.Text := FloatToStr (StrToFloat (pamyatchisla1) - StrToFloat (Edit.Text));<br />
+if pamyatoperacii = &#39;*&#39; then<br />
+Edit.Text := FloatToStr (StrToFloat (pamyatchisla1) * StrToFloat (Edit.Text));<br />
+if pamyatoperacii = &#39;/&#39; then<br />
+Edit.Text := FloatToStr (StrToFloat (pamyatchisla1) / StrToFloat (Edit.Text));<br />
+pamyatoperacii := &#39;&#39;;<br />
+pamyatchisla1 := Edit.Text;</code></p>
+
+<p>Поэтому в самом начале процедуры (<strong>procedure Operaciya (Sender: TObject);</strong>) будем выполнять все операции:</p>
+
+<p><code>procedure TForm1.Operaciya (Sender: TObject);<br />
+var i:integer;<br />
+begin<br />
+Resultat (Sender);<br />
+if sender.ClassType = TButton then<br />
+(Sender as TButton).Tag := 1;<br />
+for i:=13 to 19 do<br />
+if button[i].Tag = 1 then<br />
+...</code></p>
+
+<p>И, соответственно, при создании формы, кнопки с индексами 13, 15, 17 и 19 должны быть связаны с процедурой <strong>operaciya&nbsp;</strong>(при нажатии на кнопку мы должны ее вызывать):</p>
+
+<p><code>button[13].OnClick := operaciya;<br />
+button[15].OnClick := operaciya;<br />
+button[17].OnClick := operaciya;<br />
+button[19].OnClick := operaciya;</code></p>
+
+<p>А за результаты вычисления у нас отвечает кнопка <strong>button[14].</strong> Поэтому ее связываем с процедурой <strong>Resultat:</strong></p>
+
+<p><code>button[14].OnClick := Resultat;</code></p>
+
+<p>Попробуем еще раз запустить калькулятор и если все выполнено верно - с помощью нашего калькулятора можно ввести цифры, можно их сложить, вычесть, умножить, разделить и получить результаты вычислений.</p>
+
+<p>Всё работает? Переходим к следующему шагу.</p>
+
+<p>Хорошо, конечно, было бы сбрасывать полностью все значения калькулятора и вычислить что-нибудь другое. Для этого настроим работу двух кнопок: CE и C. Первая отвечает за сброс при неверном вводе значений. Вторая - полный сброс всех вычислений, значений, операций и т.п. (возврат в первоначальное положение калькулятора).</p>
+
+<p>Итак, в <strong>private </strong>добавим две новые процедуры:</p>
+
+<p><code><strong>procedure ButtonCClick (Sender: TObject);</strong><br />
+<strong>procedure ButtonCEClick (Sender: TObject);</strong></code></p>
+
+<p>Нажимаем CTRL+SHIFT+C и в первую пишем:</p>
+
+<p><code>Edit.Text := &#39;0&#39;;<br />
+pamyatoperacii := &#39;&#39;;<br />
+pamyatchisla1 := &#39;&#39;;</code></p>
+
+<p>А во вторую:</p>
+
+<p><code>Edit.Text := &#39;0&#39;;</code></p>
+
+<p>Дальше кнопку <strong>button[11] </strong>связываем с процедурой <strong>ButtonCEClick</strong>, а <strong>button[12]</strong> связываем с <strong>ButtonCClick:</strong></p>
+
+<p><code><strong>button[11].OnClick := ButtonCEClick;</strong><br />
+<strong>button[12].OnClick := ButtonCClick;</strong></code></p>
+
+<p>Теперь можно запрограммировать и остальные кнопки.</p>
+
+<p><u><strong>Backspace:</strong></u></p>
+
+<p><code>procedure TForm1.Backspace (Sender: TObject);<br />
+begin<br />
+if Length (Edit.Text) &gt; 0 then<br />
+Edit.Text := copy (Edit.Text, 1, Length (Edit.Text) - 1);<br />
+if Length (Edit.Text) = 0 then<br />
+Edit.Text := &#39;0&#39;;<br />
+end;</code></p>
+
+<p><u><strong>SQRT:</strong></u></p>
+
+<p><code>procedure TForm1.Koren (Sender: TObject);<br />
+begin<br />
+Edit.Text := FloatToStr (SQRT (StrToFloat (Edit.Text)));<br />
+end;</code></p>
+
+<p><u><strong>1/x:</strong></u></p>
+
+<p><code>procedure TForm1.Drob1nax (Sender: TObject);<br />
+begin<br />
+Edit.Text := FloatToStr (1 / (StrToFloat (Edit.Text)));<br />
+end;</code></p>
+
+<p><u><strong>, (запятая или десятичная дробь):</strong></u></p>
+
+<p><code>procedure TForm1.Drob (Sender: TObject);<br />
+var i:integer;<br />
+b:boolean;<br />
+begin<br />
+b := false;<br />
+if pamyatstiraniya = &#39;Надо очистить экран&#39; then<br />
+Begin<br />
+Edit.Text := &#39;&#39;;<br />
+pamyatstiraniya := &#39;&#39;;<br />
+end;<br />
+For i:=1 to Length (Edit.Text) do<br />
+Begin<br />
+if Edit.Text[i] = &#39;,&#39; then<br />
+b := true<br />
+end;<br />
+if Edit.Text[ Length (Edit.Text) ] = &#39;,&#39; then<br />
+Edit.Text := copy( Edit.Text, 1, Length (Edit.Text) - 1)<br />
+else<br />
+Begin<br />
+if b = false then<br />
+Edit.Text := Edit.Text + &#39;,&#39;;<br />
+end;<br />
+end;</code></p>
+
+<p><u><strong>+/-:</strong></u></p>
+
+<p><code>procedure TForm1.Otricanie (Sender: TObject);<br />
+begin<br />
+Edit.Text := FloatToStr (StrToFloat (Edit.Text) * (-1));<br />
+end;</code></p>
+
+<p>Для вычисления процента нам понадобится вторая переменная <strong>pamyatchisla2&nbsp;</strong>(string), которую описываем тоже вначале программы. Соответственно в процедуре <strong>ButtonCClick </strong>сбрасываем ее значение:</p>
+
+<p><code>pamyatchisla2 := &#39;&#39;;</code></p>
+
+<p><u><strong>%:</strong></u></p>
+
+<p><code>procedure TForm1.Procent (Sender: TObject);<br />
+begin<br />
+if pamyatchisla2 = &#39;&#39; then<br />
+pamyatchisla2 := Edit.Text;<br />
+if pamyatstiraniya = &#39;Надо очистить экран&#39; then<br />
+Edit.Text := FloatToStr (StrToFloat (Edit.Text) / 100 * StrToFloat (pamyatchisla2));<br />
+end;</code></p>
+
+<p>Проверяем, все ли у нас кнопки работают и дорабатываем программу.</p>
+
+<p>Если попробовать ввести цифры с клавиатуры, то можно заметить, что у нас либо 0 постоянно мешает, либо вообще ничего не вводится. Во многом это зависит от того, где фокус находится (на кнопке или на поле ввода). Если мы нажмем мышкой на поле ввода - цифры с клавиатуры можно продолжать вводить, но вот только где они будут вводиться? Немного не в том порядке, в каком хотелось бы. Да и еще, что интереснее - можно вводить не только цифры, но и буквы - что недопустимо в калькуляторе!</p>
+
+<p>Поэтому сделаем обработчик событий при вводе в поле ввода данных.</p>
+
+<p>Для формы (<strong>Form1</strong>) создадим событие OnKeyPress и пропишем следующий код:</p>
+
+<p><code>procedure TForm1.FormKeyPress (Sender: TObject; var Key: Char);<br />
+begin<br />
+case Key of<br />
+&#39;0&#39;..&#39;9&#39;:<br />
+begin<br />
+Button[ strtoint (key) ].Click;<br />
+Key := Chr(0);<br />
+Edit.SelStart := Edit.Perform (EM_LINEINDEX, 0, 0) + length (Edit.Text);<br />
+Application.ProcessMessages;<br />
+Edit.SetFocus;<br />
+end;<br />
+&#39;+&#39;:<br />
+begin<br />
+button[13].Click;<br />
+Key := Chr(0);<br />
+end;<br />
+&#39;-&#39;:<br />
+begin<br />
+button[15].Click;<br />
+Key := Chr(0);<br />
+end;<br />
+&#39;*&#39;:<br />
+begin<br />
+button[17].Click;<br />
+Key := Chr(0);<br />
+end;<br />
+&#39;/&#39;:<br />
+begin<br />
+button[19].Click;<br />
+Key := Chr(0);<br />
+end;<br />
+#8 :<br />
+begin<br />
+Backspace (Sender);<br />
+Key := Chr(0);<br />
+Edit.SelStart := Edit.Perform (EM_LINEINDEX, 0, 0) + length (Edit.Text);<br />
+Application.ProcessMessages;<br />
+Edit.SetFocus;<br />
+end;<br />
+#13 :<br />
+begin<br />
+Resultat (Sender);<br />
+Key := Chr(0);<br />
+end;<br />
+else<br />
+Key := Chr(0);<br />
+end;<br />
+end;</code></p>
+
+<p>Теперь свяжем наш <strong>Edit </strong>(который создается во время создания формы) с данным событием:</p>
+
+<p><code>Edit.OnKeyPress := FormKeyPress;</code></p>
+
+<p>А в цикле <strong>for i:=0 to 22 do</strong>, где создаются все кнопки, свяжем их тоже с событием:</p>
+
+<p><code>for i:=0 to 22 do<br />
+begin<br />
+...<br />
+button[i].OnKeyPress := FormKeyPress;<br />
+end;</code></p>
+
+<p>А при нажатии мышкой на объект - курсор перемещаем в конец строки:</p>
+
+<p><code>procedure TForm1.EditMouseDown (Sender: TObject; Button: TMouseButton;<br />
+&nbsp; Shift: TShiftState; X, Y: Integer);<br />
+begin<br />
+Edit.SelStart := Edit.Perform (EM_LINEINDEX, 0, 0) + length (Edit.Text);<br />
+Application.ProcessMessages;<br />
+Edit.SetFocus;<br />
+end;</code></p>
+
+<p>И, конечно же, запретим что-либо менять в нашем окошке:</p>
+
+<p><code>Edit.ReadOnly := true;</code></p>
+
+<p>Клавиши вроде все работают, с окном проблем не обнаружено. Теперь обработаем пункт меню Файл&gt;Выход:</p>
+
+<p><code>Application.Terminate;</code></p>
+
+<p>И Справка&gt;О программе:</p>
+
+<p><code>Application.MessageBox (&#39;Над программой работал: Горячкин Иван. 2013 г.&#39;, &#39;Калькулятор&#39;);</code></p>
+
+<p>По-желанию можно добавить объект <strong>XPManifest1&nbsp;</strong>с вкладки <strong>Win32</strong>. Тогда все клавиши калькулятора станут полукруглыми.</p>
+
+<p>Калькулятор завершен! Теперь полностью наслаждаемся его работой (при необходимости, можно что-то изменить, добавить, доработать и т.п.).</p>
+
+<p style="text-align:center"><img alt="Калькулятор на Delphi" class="aligncenter size-full wp-image-1945" src="https://fortran-new.ru/polz/2018/06/kalkulyator-na-delphi.jpg" style="max-width:276px; width:100%" title="Калькулятор на Delphi" /></p>
+
+<p>&nbsp; <u><u><strong>Вот полный код калькулятора:</strong></u></u></p>
+
+<p><code>unit Unit1;</code></p>
+
+<p><code>interface</code></p>
+
+<p><code>uses<br />
+Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,<br />
+Dialogs,StdCtrls, Menus, ComCtrls, XPMan;</code></p>
+
+<p><code>type<br />
+TForm1 = class(TForm)<br />
+MainMenu1: TMainMenu;<br />
+N1: TMenuItem;<br />
+N2: TMenuItem;<br />
+N3: TMenuItem;<br />
+N4: TMenuItem;<br />
+StatusBar1: TStatusBar;<br />
+XPManifest1: TXPManifest;<br />
+procedure FormCreate(Sender: TObject);<br />
+procedure FormKeyPress(Sender: TObject; var Key: Char);<br />
+procedure N4Click(Sender: TObject);<br />
+procedure N3Click(Sender: TObject);<br />
+private<br />
+procedure Button1Click(Sender: TObject);<br />
+procedure Operaciya(Sender: TObject);<br />
+procedure Backspace(Sender: TObject);<br />
+procedure Otricanie(Sender: TObject);<br />
+procedure ButtonCClick(Sender: TObject);<br />
+procedure ButtonCEClick(Sender: TObject);<br />
+procedure Koren(Sender: TObject);<br />
+procedure Drob(Sender: TObject);<br />
+procedure Drob1nax(Sender: TObject);<br />
+procedure Procent(Sender: TObject);<br />
+procedure Resultat(Sender: TObject);<br />
+procedure EditMouseDown(Sender: TObject; Button: TMouseButton;<br />
+Shift: TShiftState; X, Y: Integer);<br />
+{ Private declarations }<br />
+public<br />
+{ Public declarations }<br />
+end;</code></p>
+
+<p><code>var<br />
+Form1: TForm1;<br />
+Edit: TMemo;<br />
+Button: array[0..22] of TButton;<br />
+pamyatstiraniya : string;<br />
+pamyatoperacii : string;<br />
+pamyatchisla1 : string;<br />
+pamyatchisla2 : string;</code></p>
+
+<p><code>implementation</code></p>
+
+<p><code>{$R *.dfm}</code></p>
+
+<p><code>procedure TForm1.Button1Click (Sender: TObject);<br />
+var i:integer;<br />
+begin<br />
+(Sender as TButton).Tag := 1;<br />
+for i:=0 to 9 do<br />
+if button[i].Tag = 1 then<br />
+begin<br />
+button[i].Tag := 0;<br />
+break;<br />
+end;<br />
+if pamyatstiraniya = &#39;Надо очистить экран&#39; then<br />
+Begin<br />
+Edit.Text := &#39;&#39;;<br />
+pamyatstiraniya := &#39;&#39;;<br />
+end;<br />
+if Edit.Text = &#39;0&#39; then<br />
+Edit.Text := inttostr(i)<br />
+else<br />
+Edit.Text := Edit.Text + inttostr(i);<br />
+end;</code></p>
+
+<p><code>procedure TForm1.Operaciya (Sender: TObject);<br />
+var i:integer;<br />
+begin<br />
+Resultat (Sender);<br />
+if sender.ClassType = TButton then<br />
+(Sender as TButton).Tag := 1;<br />
+for i:=13 to 19 do<br />
+if button[i].Tag = 1 then<br />
+begin<br />
+button[i].Tag := 0;<br />
+break;<br />
+end;<br />
+case i of<br />
+13: pamyatoperacii := &#39;+&#39;;<br />
+15: pamyatoperacii := &#39;-&#39;;<br />
+17: pamyatoperacii := &#39;*&#39;;<br />
+19: pamyatoperacii := &#39;/&#39;;<br />
+end;<br />
+pamyatstiraniya := &#39;Надо очистить экран&#39;;<br />
+end;</code></p>
+
+<p><code>procedure TForm1.FormCreate (Sender: TObject);<br />
+var i, left, width, top : integer;<br />
+begin<br />
+left := 10;<br />
+width := 40;<br />
+Edit := TMemo.Create (form1);<br />
+Edit.Parent := form1;<br />
+Edit.Text := &#39;0&#39;;<br />
+Edit.Width := 244;<br />
+Edit.Height := 21;<br />
+Edit.Left := left;<br />
+Edit.Top := 20;<br />
+Edit.Alignment := taRightJustify;<br />
+Edit.OnKeyPress := FormKeyPress;<br />
+Edit.OnMouseDown := EditMouseDown;<br />
+Edit.ReadOnly := true;<br />
+Edit.SelStart := Edit.Perform (EM_LINEINDEX, 0, 0) + length (Edit.Text);<br />
+for i:=0 to 22 do<br />
+begin<br />
+Button[i] := TButton.Create (form1);<br />
+Button[i].Parent := form1;<br />
+case i of<br />
+10..12:<br />
+begin<br />
+if i = 10 then<br />
+left:=10;<br />
+Button[i].Left := left;<br />
+Button[i].Top := 51;<br />
+Button[i].Width := 75;<br />
+left := left + 83;<br />
+end;<br />
+1..9:<br />
+begin<br />
+if i = 1 then<br />
+begin<br />
+left := 10;<br />
+top := 176;<br />
+end;<br />
+left := left + width + 10;<br />
+if i mod 3 = 1 then<br />
+begin<br />
+left := 10;<br />
+top := top - 30;<br />
+end;<br />
+Button[i].Width := width;<br />
+Button[i].Left := left;<br />
+Button[i].Top := top;<br />
+Button[i].Caption := inttostr(i);<br />
+end;<br />
+13..20:<br />
+begin<br />
+if i = 13 then<br />
+begin<br />
+left := button[9].Left + button[9].Width + 10;<br />
+top := 206;<br />
+width := 40;<br />
+end;<br />
+left := left + width + 10;<br />
+if i mod 2 = 1 then<br />
+begin<br />
+left := button[9].Left + button[9].Width + 10;<br />
+top := top - 30;<br />
+end;<br />
+Button[i].Width := width;<br />
+Button[i].Left := left;<br />
+Button[i].Top := top;<br />
+end;<br />
+0:<br />
+begin<br />
+Button[0].Width := width;<br />
+Button[0].Left := 10;<br />
+Button[0].Top := 176;<br />
+Button[i].Caption := inttostr(i);<br />
+end;<br />
+21,22:<br />
+begin<br />
+left := left + width + 10;<br />
+if i mod 2 = 1 then<br />
+left := button[0].Left + button[9].Width + 10;<br />
+Button[i].Width := width;<br />
+Button[i].Left := left;<br />
+Button[i].Top := button[13].Top;<br />
+end;<br />
+end;<br />
+button[i].OnKeyPress := FormKeyPress;<br />
+end;<br />
+button[10].Caption := &#39;Backspace&#39;;<br />
+button[11].Caption := &#39;CE&#39;;<br />
+button[12].Caption := &#39;C&#39;;<br />
+button[13].Caption := &#39;+&#39;;<br />
+button[14].Caption := &#39;=&#39;;<br />
+button[15].Caption := &#39;-&#39;;<br />
+button[16].Caption := &#39;1/x&#39;;<br />
+button[17].Caption := &#39;*&#39;;<br />
+button[18].Caption := &#39;%&#39;;<br />
+button[19].Caption := &#39;/&#39;;<br />
+button[20].Caption := &#39;sqrt&#39;;<br />
+button[21].Caption := &#39;+/-&#39;;<br />
+button[22].Caption := &#39;,&#39;;<br />
+for i:=0 to 9 do<br />
+button[i].OnClick := Button1Click;<br />
+button[13].OnClick := operaciya;<br />
+button[15].OnClick := operaciya;<br />
+button[17].OnClick := operaciya;<br />
+button[19].OnClick := operaciya;<br />
+button[10].OnClick := Backspace;<br />
+button[11].OnClick := ButtonCEClick;<br />
+button[12].OnClick := ButtonCClick;<br />
+button[16].OnClick := Drob1nax;<br />
+button[18].OnClick := Procent;<br />
+button[20].OnClick := Koren;<br />
+button[21].OnClick := Otricanie;<br />
+button[22].OnClick := Drob;<br />
+button[14].OnClick := Resultat;<br />
+end;</code></p>
+
+<p><code>procedure TForm1.Backspace (Sender: TObject);<br />
+begin<br />
+if Length (Edit.Text) &gt; 0 then<br />
+Edit.Text := copy (Edit.Text, 1, Length (Edit.Text) - 1);<br />
+if Length (Edit.Text) = 0 then<br />
+Edit.Text := &#39;0&#39;;<br />
+end;</code></p>
+
+<p><code>procedure TForm1.Otricanie (Sender: TObject);<br />
+begin<br />
+Edit.Text := FloatToStr (StrToFloat (Edit.Text) * (-1));<br />
+end;</code></p>
+
+<p><code>procedure TForm1.ButtonCEClick (Sender: TObject);<br />
+begin<br />
+Edit.Text := &#39;0&#39;;<br />
+end;</code></p>
+
+<p><code>procedure TForm1.ButtonCClick (Sender: TObject);<br />
+begin<br />
+Edit.Text := &#39;0&#39;;<br />
+pamyatoperacii := &#39;&#39;;<br />
+pamyatchisla1 := &#39;&#39;;<br />
+pamyatchisla2 := &#39;&#39;;<br />
+end;</code></p>
+
+<p><code>procedure TForm1.Koren (Sender: TObject);<br />
+begin<br />
+Edit.Text := FloatToStr (SQRT (StrToFloat (Edit.Text)));<br />
+end;</code></p>
+
+<p><code>procedure TForm1.Drob (Sender: TObject);<br />
+var i:integer;<br />
+b:boolean;<br />
+begin<br />
+b := false;<br />
+if pamyatstiraniya = &#39;Надо очистить экран&#39; then<br />
+Begin<br />
+Edit.Text := &#39;&#39;;<br />
+pamyatstiraniya := &#39;&#39;;<br />
+end;<br />
+For i:=1 to Length (Edit.Text) do<br />
+Begin<br />
+if Edit.Text[i] = &#39;,&#39; then<br />
+b := true<br />
+end;<br />
+if Edit.Text[ Length (Edit.Text) ] = &#39;,&#39; then<br />
+Edit.Text := copy (Edit.Text, 1, Length(Edit.Text) - 1)<br />
+else<br />
+Begin<br />
+if b = false then<br />
+Edit.Text := Edit.Text + &#39;,&#39;;<br />
+end;<br />
+end;</code></p>
+
+<p><code>procedure TForm1.FormKeyPress (Sender: TObject; var Key: Char);<br />
+begin<br />
+case Key of<br />
+&#39;0&#39;..&#39;9&#39;:<br />
+begin<br />
+Button[ strtoint (key) ].Click;<br />
+Key := Chr(0);<br />
+Edit.SelStart := Edit.Perform (EM_LINEINDEX, 0, 0) + length (Edit.Text);<br />
+Application.ProcessMessages;<br />
+Edit.SetFocus;<br />
+end;<br />
+&#39;+&#39;:<br />
+begin<br />
+button[13].Click;<br />
+Key := Chr(0);<br />
+end;<br />
+&#39;-&#39;:<br />
+begin<br />
+button[15].Click;<br />
+Key := Chr(0);<br />
+end;<br />
+&#39;*&#39;:<br />
+begin<br />
+button[17].Click;<br />
+Key := Chr(0);<br />
+end;<br />
+&#39;/&#39;:<br />
+begin<br />
+button[19].Click;<br />
+Key := Chr(0);<br />
+end;<br />
+#8 :<br />
+begin<br />
+Backspace (Sender);<br />
+Key := Chr(0);<br />
+Edit.SelStart := Edit.Perform (EM_LINEINDEX, 0, 0) + length (Edit.Text);<br />
+Application.ProcessMessages;<br />
+Edit.SetFocus;<br />
+end;<br />
+#13 :<br />
+begin<br />
+Resultat (Sender);<br />
+Key := Chr(0);<br />
+end;<br />
+else<br />
+Key := Chr(0);<br />
+end;<br />
+end;</code></p>
+
+<p><code>procedure TForm1.Drob1nax (Sender: TObject);<br />
+begin<br />
+Edit.Text := FloatToStr (1 / (StrToFloat (Edit.Text)));<br />
+end;</code></p>
+
+<p><code>procedure TForm1.Procent (Sender: TObject);<br />
+begin<br />
+if pamyatchisla2 = &#39;&#39; then<br />
+pamyatchisla2 := Edit.Text;<br />
+if pamyatstiraniya = &#39;Надо очистить экран&#39; then<br />
+Edit.Text := FloatToStr (StrToFloat (Edit.Text) / 100 * StrToFloat (pamyatchisla2));<br />
+end;</code></p>
+
+<p><code>procedure TForm1.Resultat (Sender: TObject);<br />
+begin<br />
+if pamyatoperacii = &#39;+&#39; then<br />
+Edit.Text := FloatToStr (StrToFloat (pamyatchisla1) + StrToFloat (Edit.Text));<br />
+if pamyatoperacii = &#39;-&#39; then<br />
+Edit.Text := FloatToStr (StrToFloat (pamyatchisla1) - StrToFloat (Edit.Text));<br />
+if pamyatoperacii = &#39;*&#39; then<br />
+Edit.Text := FloatToStr (StrToFloat (pamyatchisla1) * StrToFloat (Edit.Text));<br />
+if pamyatoperacii = &#39;/&#39; then<br />
+Edit.Text := FloatToStr (StrToFloat (pamyatchisla1) / StrToFloat (Edit.Text));<br />
+pamyatoperacii := &#39;&#39;;<br />
+pamyatchisla1 := Edit.Text;<br />
+end;</code></p>
+
+<p><code>procedure TForm1.FormClose (Sender: TObject; var Action: TCloseAction);<br />
+begin<br />
+Application.Terminate; // чтобы освободить все процессы из памяти программы при ее завершении<br />
+end;</code></p>
+
+<p><code>procedure TForm1.N4Click (Sender: TObject);<br />
+begin<br />
+Close;<br />
+end;</code></p>
+
+<p><code>procedure TForm1.N3Click (Sender: TObject);<br />
+begin<br />
+Application.MessageBox (&#39;Над программой работал: Горячкин Иван. 2013 г.&#39;, &#39;Калькулятор&#39;);<br />
+end;</code></p>
+
+<p><code>procedure TForm1.EditMouseDown (Sender: TObject; Button: TMouseButton;<br />
+Shift: TShiftState; X, Y: Integer);<br />
+begin<br />
+Edit.SelStart := Edit.Perform (EM_LINEINDEX, 0, 0) + length (Edit.Text);<br />
+Application.ProcessMessages;<br />
+Edit.SetFocus;<br />
+end;</code></p>
+
+<p><code>end.</code></p>
+
+<p style="text-align:center"><iframe width="100%" height="415" class="yytt" src="https://www.youtube.com/embed/md1MIlwMSHM" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe></p>
+
+<p style="text-align:center"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2348228209994753"
+     data-ad-slot="7939162671"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</p>
+
+<p style="text-align:center">&nbsp;</p>
+
+<p style="text-align:center">У кого получилось разработать калькулятор - пишите в комментариях!</p>
+
+<p>&nbsp;</p>
+
+<h4 style="text-align:center"><a download="" href="https://fortran-new.ru/polz/files/kalkulator.zip" title="Скачать исходник калькулятора">Скачать исходник калькулятора</a></h4>
+
+<p>&nbsp;</p>
+
+<hr />
+<p style="text-align:center"><strong><a href="https://fortran-new.ru/pascaldelphi/pishem-kalkulyator-na-delphi-7-chast1/" title="Пишем калькулятор на Delphi 7 (часть1)">&lt;&lt;Предыдущая статья</a><strong><strong><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong></strong></strong>Следующая статья &gt;&gt;</strong></p>
+<span itemscope="" itemtype="https://schema.org/VideoObject"><meta itemprop="name" content="Как сделать калькулятор часть2"/><meta itemprop="description" content="Продолжение видеоурока по созданию стандартного калькулятора на Delphi 7. Сайт: https://fortran-new.ru/pascaldelphi/pishem-kalkulyator-na-delphi-7-chast2/ Пе..."/><span itemprop="thumbnail" itemscope itemtype="http://schema.org/ImageObject"> <link itemprop="contentUrl" href="https://i.ytimg.com/vi/md1MIlwMSHM/maxresdefault.jpg"/></span><link itemprop="thumbnailUrl" href="https://i.ytimg.com/vi/md1MIlwMSHM/maxresdefault.jpg"/><meta itemprop="uploadDate" content="2014-05-18"/><meta itemprop="duration" content="PT19M11S"/><link itemprop="embedUrl" href="https://www.youtube.com/embed/md1MIlwMSHM"/><meta itemprop="isFamilyFriendly" content="true"/><link itemprop="url" href="https://fortran-new.ru/pascaldelphi/pishem-kalkulyator-na-delphi-7-chast2/"/></span><p class="spandateresstatei">Опубликовано: <span itemprop="datePublished">2013-03-24 02:30:52</span><meta itemprop="dateModified" content="2019-09-13 20:29:12"></p></div><div class="pohogie_articles_block_title">Читайте также:</div><div class="pohogie_articles_block_all"><div class="blockrubrcategor"><a class="blockrubrcategor_a" href="https://fortran-new.ru/pascaldelphi/ustanovka-borland-delphi-7-na-kompyuter/"><div class="blockrubrcategor_img_div"><div class="blockrubrcategor_img" style="background:url( https://fortran-new.ru/polz/2019/05/borland-delphi-7-ustanovka-1.jpg );"></div></div><div class="blockrubrcategor_title_tbl"><div class="blockrubrcategor_title_td"><div class="blockrubrcategor_title">Установка Borland Delphi 7 на компьютер</div></div></div><div class="blockrubrcategor_next_div"><div class="blockrubrcategor_next">Читать далее</div></div></a></div><div class="blockrubrcategor"><a class="blockrubrcategor_a" href="https://fortran-new.ru/pascaldelphi/osnovnye-ponyatiya-v-delphi/"><div class="blockrubrcategor_img_div"><div class="blockrubrcategor_img" style="background:url( https://fortran-new.ru/polz/2019/06/delphi-instruction.jpg );"></div></div><div class="blockrubrcategor_title_tbl"><div class="blockrubrcategor_title_td"><div class="blockrubrcategor_title">Основные понятия в Delphi</div></div></div><div class="blockrubrcategor_next_div"><div class="blockrubrcategor_next">Читать далее</div></div></a></div><div class="blockrubrcategor"><a class="blockrubrcategor_a" href="https://fortran-new.ru/pascaldelphi/pishem-kalkulyator-na-delphi-7-chast1/"><div class="blockrubrcategor_img_div"><div class="blockrubrcategor_img" style="background:url( https://fortran-new.ru/polz/2019/05/kalkulyator-na-delphi-1.jpg );"></div></div><div class="blockrubrcategor_title_tbl"><div class="blockrubrcategor_title_td"><div class="blockrubrcategor_title">Пишем калькулятор на Delphi 7 (часть1)</div></div></div><div class="blockrubrcategor_next_div"><div class="blockrubrcategor_next">Читать далее</div></div></a></div></div><div class="pohogie_products_block_title">Заказывайте товары и услуги:</div><div class="pohogie_products_block_all"><div class="blockrubrcategor"><a class="blockrubrcategor_a" href="https://fortran-new.ru/products/pascal-yazyk-programmirovaniya/"><div class="blockrubrcategor_img_div"><div class="blockrubrcategor_img" style="background:url( https://fortran-new.ru/polz/2019/08/dvd-pascal.jpg );"></div></div><div class="blockrubrcategor_title_tbl"><div class="blockrubrcategor_title_td"><div class="blockrubrcategor_title">Pascal - Язык программирования</div></div></div><div class="blockrubrcategor_cena_div"><div class="blockrubrcategor_cena">1 200 руб.</div></div><div class="blockrubrcategor_next_div"><div class="blockrubrcategor_next">Подробнее</div></div></a></div><div class="blockrubrcategor"><a class="blockrubrcategor_a" href="https://fortran-new.ru/products/programmirovanie-pascal/"><div class="blockrubrcategor_img_div"><div class="blockrubrcategor_img" style="background:url( https://fortran-new.ru/polz/2019/08/kniga-programmirovanie-paskal.jpg );"></div></div><div class="blockrubrcategor_title_tbl"><div class="blockrubrcategor_title_td"><div class="blockrubrcategor_title">Программирование — Pascal</div></div></div><div class="blockrubrcategor_cena_div"><div class="blockrubrcategor_cena">300 руб.</div></div><div class="blockrubrcategor_next_div"><div class="blockrubrcategor_next">Подробнее</div></div></a></div><div class="blockrubrcategor"><a class="blockrubrcategor_a" href="https://fortran-new.ru/products/php-programmirovanie/"><div class="blockrubrcategor_img_div"><div class="blockrubrcategor_img" style="background:url( https://fortran-new.ru/polz/2019/12/programmirovanie-php-online.jpg );"></div></div><div class="blockrubrcategor_title_tbl"><div class="blockrubrcategor_title_td"><div class="blockrubrcategor_title">PHP - программирование</div></div></div><div class="blockrubrcategor_cena_div"><div class="blockrubrcategor_cena">8 000 руб.</div></div><div class="blockrubrcategor_next_div"><div class="blockrubrcategor_next">Подробнее</div></div></a></div></div><div class="pohogie_ads_block_all_tbl"><div class="block_ads_td"><div class="block_ads"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- Похожая реклама (под статьями) 1 --><ins class="adsbygoogle"style="display:inline-block;width:260px;height:260px"data-ad-client="ca-pub-2348228209994753"data-ad-slot="1388070268"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div><div class="block_ads_td"><div class="block_ads"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- Похожая реклама (под статьями) 2 --><ins class="adsbygoogle"style="display:inline-block;width:260px;height:260px"data-ad-client="ca-pub-2348228209994753"data-ad-slot="6012537527"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div><div class="block_ads_td"><div class="block_ads"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- Похожая реклама (под статьями) 3 --><ins class="adsbygoogle"style="display:inline-block;width:260px;height:260px"data-ad-client="ca-pub-2348228209994753"data-ad-slot="5085989737"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div><hr><div><div class="comment_main_title">Комментарии (<span itemprop="commentCount">29</span>)</div><div class="comment_add_button" onclick="message_LCP('Чтобы оставить комментарий, необходимо войти на сайт!','false');">Оставить комментарий</div><div class="comment_all"><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" ></div></div><div class="comment_block_td comment_author" itemprop="creator">Zhanna</div></div><div class="comment_description" itemprop="text">[Error] Unit1.pas(33): Undeclared identifier: &#039;Button1Click&#039;
+из-за чего может появится такая ошибка? когда доделала первую часть все было без ошибок
+помогите пожалуйста! заранее благодарю</div><div class="comment_dater" itemprop="datePublished">2014-05-09 19:35:36</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" style="background:url(https://fortran-new.ru/polz/2019/07/avatar-nemnogo-o-kompyutere.jpg);"></div></div><div class="comment_block_td comment_author" itemprop="creator">Немного о компьютере (администратор)</div></div><div class="comment_description" itemprop="text">Undeclared identifier - неописанная переменная. Скорее всего, Вы не создали или не прописали описание для этой процедуры (не объявили процедуру в начале программы). В течение недели запишу видео и уже наглядно покажу, как вручную создавать процедуры. Спасибо за комментарий!</div><div class="comment_dater" itemprop="datePublished">2014-05-14 04:24:24</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" style="background:url(https://fortran-new.ru/polz/2019/07/avatar-nemnogo-o-kompyutere.jpg);"></div></div><div class="comment_block_td comment_author" itemprop="creator">Немного о компьютере (администратор)</div></div><div class="comment_description" itemprop="text">Ошибка в procedure TForm1.Backspace(Sender: TObject); исправлена!!! Полный код калькулятора теперь абсолютно рабочий!</div><div class="comment_dater" itemprop="datePublished">2014-05-19 01:24:11</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" ></div></div><div class="comment_block_td comment_author" itemprop="creator">Бекназар</div></div><div class="comment_description" itemprop="text">Ошибка пожалуйста помогите pamyatstiraniya:string;
+pamyatoperacii:string;
+pamyatchisla1:string;
+pamyatchisla2:string;</div><div class="comment_dater" itemprop="datePublished">2014-05-27 18:09:27</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" style="background:url(https://fortran-new.ru/polz/2019/07/avatar-nemnogo-o-kompyutere.jpg);"></div></div><div class="comment_block_td comment_author" itemprop="creator">Немного о компьютере (администратор)</div></div><div class="comment_description" itemprop="text">Пожалуй, без кода программы помочь ничем не сможем... может перед объявлением этих переменных нет ключевого слова var?
+Посмотрите внимательно видео и полный код программы. По-идее должно полностью всё работать...
+Если никак не получится - пришлите Ваш проект по почте support@fortran-new.ru.
+Также, если проблему решите самостоятельно - обязательно напишите для других ход решения проблемы в комментариях!</div><div class="comment_dater" itemprop="datePublished">2014-05-28 02:26:28</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" ></div></div><div class="comment_block_td comment_author" itemprop="creator">Вячеслав</div></div><div class="comment_description" itemprop="text">спасибо за уроки!
+все получилось 
+было несколько других ошибок, но я их исправил</div><div class="comment_dater" itemprop="datePublished">2014-09-09 03:09:08</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" ></div></div><div class="comment_block_td comment_author" itemprop="creator">Артем</div></div><div class="comment_description" itemprop="text">Процент не считает,может кто-то изменить код?</div><div class="comment_dater" itemprop="datePublished">2014-12-04 22:53:51</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" ></div></div><div class="comment_block_td comment_author" itemprop="creator">Артем</div></div><div class="comment_description" itemprop="text">Все, я разобрался...
+Кому надо, вот:
+procedure TForm1.Procent (Sender: TObject);
+begin
+Edit.Text := FloatToStr (StrToFloat (pamyatchisla1) * strtofloat (edit.text) / 100);
+end;</div><div class="comment_dater" itemprop="datePublished">2014-12-05 00:25:51</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" ></div></div><div class="comment_block_td comment_author" itemprop="creator">ascetic</div></div><div class="comment_description" itemprop="text">Добрый день! хочу создать калькулятор перерасчета. подскажите плиз, как можно установить зависимость события от текущей даты?</div><div class="comment_dater" itemprop="datePublished">2015-01-28 18:23:06</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" style="background:url(https://fortran-new.ru/polz/2019/07/avatar-nemnogo-o-kompyutere.jpg);"></div></div><div class="comment_block_td comment_author" itemprop="creator">Немного о компьютере (администратор)</div></div><div class="comment_description" itemprop="text">Для отображения текущей даты, отвечает функция date, за время - time. Вот программа для перевода из текста в дату и обратно:
+var d:TDateTime;
+s:string;
+begin
+s:=FormatDateTime( &#039;dd.mm.yyyy&#039;,date);    // из даты в строку
+s:=s+FormatDateTime( &#039; hh:nn:ss&#039;,time);   // из времени в строку
+showmessage(s);
+d:=VarToDateTime(s);   // из строки в дату
+showmessage(FormatDateTime( &#039;dd.mm.yyyy&#039;,d));
+showmessage(FormatDateTime( &#039;hh:mm&#039;,d));
+Соответственно, сравнивать можно как даты, так и строки в заданном формате.
+Конечно, это в общих чертах. Чтобы конкретнее объяснить, нужен Ваш код.</div><div class="comment_dater" itemprop="datePublished">2015-02-11 07:17:24</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" style="background:url(https://fortran-new.ru/polz/2019/07/avatar-nemnogo-o-kompyutere.jpg);"></div></div><div class="comment_block_td comment_author" itemprop="creator">Немного о компьютере (администратор)</div></div><div class="comment_description" itemprop="text">Спасибо за исправление:)</div><div class="comment_dater" itemprop="datePublished">2015-02-11 07:23:44</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" ></div></div><div class="comment_block_td comment_author" itemprop="creator">Евгений</div></div><div class="comment_description" itemprop="text">Выдаёт ошибку в процедуре TForm1 Koren</div><div class="comment_dater" itemprop="datePublished">2015-07-31 17:09:53</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" style="background:url(https://fortran-new.ru/polz/2019/07/avatar-nemnogo-o-kompyutere.jpg);"></div></div><div class="comment_block_td comment_author" itemprop="creator">Немного о компьютере (администратор)</div></div><div class="comment_description" itemprop="text">А в процедурах до этого в TForm1.Backspace, TForm1.Otricanie, TForm1.ButtonCEClick, TForm1.ButtonCClick выдает ошибку? Если нет - значит сделайте TForm1.Koren заново в точности так же. Если же выдает ошибку - может процедуры не описаны в самом начале?
+Еще, как вариант, возможно, (лично у меня) в 80% случаях есть синтаксические ошибки. Проверьте, правильно ли все прописали.</div><div class="comment_dater" itemprop="datePublished">2015-08-01 00:23:38</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" ></div></div><div class="comment_block_td comment_author" itemprop="creator">Евгений</div></div><div class="comment_description" itemprop="text">У меня есть ошибки во всех функциях. Если можно скинь проект калькулятора. Готовый.</div><div class="comment_dater" itemprop="datePublished">2015-08-04 17:15:15</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" style="background:url(https://fortran-new.ru/polz/2019/07/avatar-nemnogo-o-kompyutere.jpg);"></div></div><div class="comment_block_td comment_author" itemprop="creator">Немного о компьютере (администратор)</div></div><div class="comment_description" itemprop="text">Добавил исходник в статью)</div><div class="comment_dater" itemprop="datePublished">2015-08-04 19:46:45</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" ></div></div><div class="comment_block_td comment_author" itemprop="creator">Евгений</div></div><div class="comment_description" itemprop="text">Спасибо вам огромное. Вы лучший!</div><div class="comment_dater" itemprop="datePublished">2015-08-05 14:57:40</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" ></div></div><div class="comment_block_td comment_author" itemprop="creator">Евгений</div></div><div class="comment_description" itemprop="text">И ещё вопрос, что значит 1/х??</div><div class="comment_dater" itemprop="datePublished">2015-08-05 21:16:35</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" style="background:url(https://fortran-new.ru/polz/2019/07/avatar-nemnogo-o-kompyutere.jpg);"></div></div><div class="comment_block_td comment_author" itemprop="creator">Немного о компьютере (администратор)</div></div><div class="comment_description" itemprop="text">x - переменная, которую вводит пользователь. Если пользователь ввел 10 и нажал на кнопку &quot;1/x&quot;, то в результате 1 разделится на 10 и получится 0,1. Если еще раз разделить 1 на 0,1 то получится 10.
+Кстати, на ноль делить нельзя. Можно дописать это правило при вычислении функции...</div><div class="comment_dater" itemprop="datePublished">2015-08-06 10:07:50</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" ></div></div><div class="comment_block_td comment_author" itemprop="creator">aaaa</div></div><div class="comment_description" itemprop="text">zdraste...vudaet owibku nahodim &#039;=&#039; no vuhodit &#039;(&#039;??pomogite plizzzz srochno seichas nuzhno</div><div class="comment_dater" itemprop="datePublished">2015-11-19 12:36:01</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" ></div></div><div class="comment_block_td comment_author" itemprop="creator">aaaa</div></div><div class="comment_description" itemprop="text">PROSENT NE RABOTAET U MENYA....I ISPRAVILA TOZHE HE RABOTAET VUHODIT &#039;IS NOT A VALID FLOATING POIN VALUE&#039;</div><div class="comment_dater" itemprop="datePublished">2015-11-19 12:50:44</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" ></div></div><div class="comment_block_td comment_author" itemprop="creator">Максим</div></div><div class="comment_description" itemprop="text">Всем привет! Все сделал, запустилось! Но запустилось не просто после копирования написанной программы в Delphi, а после того, когда начал делать все по порядку по видео уроку. Зато вот после, скачал исходный файл самого готового калькулятора и появилась одна, даже не знаю можно назвать это проблемой, скорее один нюанс. при запуске калькулятора все работает четко, калькулятор отменный, а вот вверху нет панель MainMenu(фаил, справка и тп.) просто не отображаются. подскажите почему?? заранее спасибо!</div><div class="comment_dater" itemprop="datePublished">2016-03-04 00:50:34</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" style="background:url(https://fortran-new.ru/polz/2019/07/avatar-nemnogo-o-kompyutere.jpg);"></div></div><div class="comment_block_td comment_author" itemprop="creator">Немного о компьютере (администратор)</div></div><div class="comment_description" itemprop="text">Здравствуйте! Извините, это я забыл добавить вверху панель MainMenu (первоначальный исходник удален, а позже делал уже на скорую руку). Большое спасибо за замечание:)</div><div class="comment_dater" itemprop="datePublished">2016-03-04 23:59:23</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" style="background:url(https://fortran-new.ru/polz/2019/07/avatar-nemnogo-o-kompyutere.jpg);"></div></div><div class="comment_block_td comment_author" itemprop="creator">Немного о компьютере (администратор)</div></div><div class="comment_description" itemprop="text">значит результат присваиваемой переменной должен быть дробным или длинным дробным)</div><div class="comment_dater" itemprop="datePublished">2016-03-05 00:23:21</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" ></div></div><div class="comment_block_td comment_author" itemprop="creator">Максим</div></div><div class="comment_description" itemprop="text">ошибка в Drob1nax в слове procedure</div><div class="comment_dater" itemprop="datePublished">2016-04-03 19:43:17</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" ></div></div><div class="comment_block_td comment_author" itemprop="creator">Костя</div></div><div class="comment_description" itemprop="text">Всем привет!
+В чем разница С и СЕ? Зачем два сброса?
+А по логике, Backspace и СE должны выполнять одну и ту же функцию.
+В общем,нужно удалить CE,чтоб калькулятор был правильнее</div><div class="comment_dater" itemprop="datePublished">2016-06-06 02:03:34</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" style="background:url(https://fortran-new.ru/polz/2019/07/avatar-nemnogo-o-kompyutere.jpg);"></div></div><div class="comment_block_td comment_author" itemprop="creator">Немного о компьютере (администратор)</div></div><div class="comment_description" itemprop="text">Backspace стирает последовательно все цифры с конца (как на клавиатуре).
+C - полный сброс. Это значит, что обнуляет экран, сбрасывает все настройки по дальнейшим действиям (продолжать, например, складывать числа после сложения не получится. Придется набирать все заново).
+CE - сброс текущего экрана. Это значит, что обнуляет экран, но сохраняет все предыдущие действия пользователя (например, при сложении 2+3+CE+4 получится 6), или отменяет последний ввод числа (можно вместо нее использовать backspace).
+Удалить кнопки, конечно, можно. Не спорю. Но этот калькулятор мы старились сделать внешне похожим на тот же стандартный, который есть в windows xp.</div><div class="comment_dater" itemprop="datePublished">2016-06-12 21:50:22</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" ></div></div><div class="comment_block_td comment_author" itemprop="creator">Алексей</div></div><div class="comment_description" itemprop="text">При делении на ноль программа вылетает 
+Пробовал через showMassage, но что-то не получается
+Но а так калькулятор полностью работоспособен</div><div class="comment_dater" itemprop="datePublished">2016-06-17 15:58:42</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" style="background:url(https://fortran-new.ru/polz/2019/07/avatar-nemnogo-o-kompyutere.jpg);"></div></div><div class="comment_block_td comment_author" itemprop="creator">Немного о компьютере (администратор)</div></div><div class="comment_description" itemprop="text">И правда:) спасибо за замечание, сейчас исправим)</div><div class="comment_dater" itemprop="datePublished">2016-06-17 18:53:24</div></div><div class="comment_block" itemprop="comment" itemscope="itemscope" itemtype="https://schema.org/Comment"><div class="comment_block_tbl"><div class="comment_block_td comment_photo"><div class="comment_photo_img" ></div></div><div class="comment_block_td comment_author" itemprop="creator">Алексей</div></div><div class="comment_description" itemprop="text">Если можно напишите в комментарий часть правильного кода 
+С выходом сообщения с ошибкой при делении на нуль с комментариями  //Что бы разобраться с данной проблемой раз и навсегда :)</div><div class="comment_dater" itemprop="datePublished">2016-06-17 23:43:37</div></div></div></div></main></section><meta itemprop="identifier" content="1585"><meta itemprop="mainEntityOfPage" content="https://fortran-new.ru/pascaldelphi/pishem-kalkulyator-na-delphi-7-chast2/"><meta itemprop="author" content="Иван Горячкин"><meta itemprop="description" content="Вторая часть по программированию основных кнопок стандартного калькулятора с помощью Borland Delphi 7"><div itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization"><div itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject"><img itemprop="url image" src="https://fortran-new.ru/themes/fortrannew/img/logo48-48.png" style="display:none;"><meta itemprop="width" content="48"><meta itemprop="height" content="48"></div><meta itemprop="name" content="Немного о компьютере"><meta itemprop="address" content="Россия"><meta itemprop="telephone" content=""></div></div></div><div class="clear"></div></div><!-- END CONTENT -->
+<div class="body_space"><!-- NO TEXT --></div>
+</div>
+
+<footer class="full_w">
+<!-- FOOTER -->
+<div class="footer full_w" itemscope itemtype="https://schema.org/WPFooter">
+  <div class="mainpagewidth table full_w">
+    <div class="tabletd align_left valign_middle">
+      <div class="footer_text_left">
+        Все права защищены &copy; <span itemprop="copyrightYear">2011</span>-2022 <span itemprop="name">FORTRAN NEW company</span><br>
+              </div>
+    </div>
+    <div class="tabletd align_right valign_middle">
+      <div class="footer_text_right i_block">
+                <div class="footer_text_right_div">Автор сайта: Иван Горячкин</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END FOOTER -->
+</footer>
+<!-- Top100 (Kraken) Counter -->
+<script>
+    (function (w, d, c) {
+    (w[c] = w[c] || []).push(function() {
+        var options = {
+            project: 2731383,
+        };
+        try {
+            w.top100Counter = new top100(options);
+        } catch(e) { }
+    });
+    var n = d.getElementsByTagName("script")[0],
+    s = d.createElement("script"),
+    f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src =
+    (d.location.protocol == "https:" ? "https:" : "http:") +
+    "//st.top100.ru/top100/top100.js";
+
+    if (w.opera == "[object Opera]") {
+    d.addEventListener("DOMContentLoaded", f, false);
+} else { f(); }
+})(window, document, "_top100q");
+</script>
+<noscript>
+  <img src="//counter.rambler.ru/top100.cnt?pid=2731383" alt="Топ-100" />
+</noscript>
+<!-- END Top100 (Kraken) Counter -->
+
+
+
+
+
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "2211043", type: "pageView", start: (new Date()).getTime()});
+(function (d, w, id) {
+  if (d.getElementById(id)) return;
+  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+  ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "topmailru-code");
+</script><noscript><div>
+<img src="//top-fwz1.mail.ru/counter?id=2211043;js=na" style="border:0;position:absolute;left:-9999px;" alt="" />
+</div></noscript>
+<!-- //Rating@Mail.ru counter -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(19020424, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/19020424" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+
+
+
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-23478051-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+<!--LiveInternet counter--><script type="text/javascript">
+new Image().src = "//counter.yadro.ru/hit?r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,150))+
+";"+Math.random();</script><!--/LiveInternet--><!-- Сообщения с ошибками -->
+<div class="message_error_div" id="message_error_div"></div>
+<!-- End Сообщения с ошибками -->
+</body></html>

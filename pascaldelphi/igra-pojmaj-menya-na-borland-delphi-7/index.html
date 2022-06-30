@@ -1,0 +1,655 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Игра &quot;Поймай меня&quot; на Borland Delphi 7</title>
+<meta name="description" content="Принцип самой простой и хорошо известной игры &quot;Поймай меня&quot; состоит в том, чтобы поймать кнопку, появляющуюся в разных частях окна программы">
+<meta name="keywords" content="Игра поймай меня, как сделать игру, Borland Delphi 7, игры с кнопкой, самые простые игры">
+<link rel="stylesheet" href="https://fortran-new.ru/themes/fortrannew/style.min.css" type="text/css"/>
+<link rel="stylesheet" async href="https://fortran-new.ru/admin/style-structure.min.css" type="text/css"/>
+<link rel="stylesheet" async href="https://fortran-new.ru/admin/style-panelaccaunt.css" type="text/css"/>
+<link rel="stylesheet" async href="https://fortran-new.ru/autorization/style.css" type="text/css"/>
+<link rel="stylesheet" async href="https://fortran-new.ru/includes/messages/messages.min.css" type="text/css"/>
+<script async src="https://fortran-new.ru/themes/fortrannew/scripter.min.js"></script>
+<script async src="https://fortran-new.ru/autorization/script-popup.js"></script>
+<script async src="https://fortran-new.ru/admin/scripter.min.js"></script>
+<script async src="https://fortran-new.ru/includes/messages/messages.min.js"></script>
+<link rel="canonical" href="https://fortran-new.ru/pascaldelphi/igra-pojmaj-menya-na-borland-delphi-7/"/>
+<link rel="stylesheet" async href="https://fortran-new.ru/themes/fortrannew/mobile.css?ver=2022-06-30-09-28-14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="image/x-icon" href="https://fortran-new.ru/themes/fortrannew/img/logo16-16-24b.ico"/><link rel="shortcut icon" type="image/vnd.microsoft.icon" href="https://fortran-new.ru/themes/fortrannew/img/logo16-16-24b.ico"/><link rel="icon" type="image/png" sizes="16x16" href="https://fortran-new.ru/themes/fortrannew/img/logo16-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://fortran-new.ru/themes/fortrannew/img/logo32-32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="https://fortran-new.ru/themes/fortrannew/img/logo48-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://fortran-new.ru/themes/fortrannew/img/logo192-192.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://fortran-new.ru/themes/fortrannew/img/logo76-76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://fortran-new.ru/themes/fortrannew/img/logo120-120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://fortran-new.ru/themes/fortrannew/img/logo152-152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://fortran-new.ru/themes/fortrannew/img/logo180-180.png">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0d6780"><meta name="msapplication-TileColor" content="#d5ffff"><meta name="msapplication-TileImage" content="https://fortran-new.ru/themes/fortrannew/img/logo144-144.png"><meta name="theme-color" content="#00c0ff"><script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "WebSite",        "potentialAction": {
+"@type": "SearchAction",
+"target": "https://fortran-new.ru/search?search_str={search_term}",
+"query-input": "required name=search_term"
+},		  "url": "https://fortran-new.ru/"
+}
+</script>
+<meta property="og:url" content="https://fortran-new.ru/pascaldelphi/igra-pojmaj-menya-na-borland-delphi-7/"><meta property="og:image" content="https://fortran-new.ru/polz/2019/05/igra-pojmaj-menya-na-delphi7-1.jpg"><meta property="og:type" content="article"><meta property="og:site_name" content="Немного о компьютере"><meta property="og:title" content="Игра &quot;Поймай меня&quot; на Borland Delphi 7"><meta property="og:description" content="Принцип самой простой и хорошо известной игры &quot;Поймай меня&quot; состоит в том, чтобы поймать кнопку, появляющуюся в разных частях окна программы"><script data-ad-client="ca-pub-2348228209994753" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><link rel="stylesheet" async href="https://fortran-new.ru/themes/fortrannew/content/7/all-style.min.css"/>
+<script async src="https://fortran-new.ru/themes/fortrannew/content/7/all-script.min.js" charset="utf-8"></script>
+</head>
+
+
+
+
+     <body>
+  <div class="body_all full_mh full_w body_all_margin">
+    <!-- CONTENT -->
+
+    <div class="panel_accaunt full_w">
+      <div class="mainpagewidth">
+        <div class="panel_accaunt_login float_r"><ul class="panel_yprav_ul full_w"><li class="panel_yprav_li"><a class="panel_yprav_a"  onclick="location.href='https://fortran-new.ru/lcp-admin/';">Личный&nbsp;кабинет</a></li><div class="clear"></div></ul></div>        <!-- <div class="panel_accaunt_login float_r">Личный кабинет</div> -->
+        <div class="clear"></div>
+      </div>
+    </div>
+
+    <header>
+      <div class="header" itemscope itemtype="https://schema.org/WPHeader">
+        <div class="header_table full_w max_width" style="box-sizing:border-box;">
+          <div class="header_title header_padding tabletd align_left valign_middle">
+            <div class="table full_w full_h" style="box-sizing:border-box;">
+              <div class="tabletd full_h valign_bottom" style="box-sizing:border-box;">
+                <a href="https://fortran-new.ru/" rel="home"><img src="/themes/fortran/img/logo48-48.png" width="50px" title="Немного о компьютере" alt="Логотип"></a>
+              </div>
+              <div class="tabletd full_w full_h valign_middle header_title_a_padding" style="box-sizing:border-box;" itemprop="name">
+                <a itemprop="url" href="https://fortran-new.ru/" class="header_title_a" rel="home">
+                  <div class="header_title_h1">
+                  Немного о компьютере                </div>
+              </a>
+              </div>
+            </div>
+          </div>
+          <div class="header_empty header_padding tabletd align_center valign_middle" style="box-sizing:border-box;">
+          </div>
+          <div class="header_mobile_nav header_padding tabletd align_right valign_middle relative display_none">
+            <div class="mobile_nav_button i_block" onclick="mobile_nav_button();">
+            </div>
+          </div>
+          <div class="header_soc_network header_padding tabletd valign_middle relative" style="box-sizing:border-box;">
+            <div class="header_soc_network_one"><a href="https://vk.com/fortrannew" target="_blank" rel="nofollow"><div class="header_soc_network_soc" style="background:url(https://fortran-new.ru/polz/2019/08/soc-vk.jpg);"></div></a></div><div class="header_soc_network_one"><a href="https://fb.me/FortranNew" target="_blank" rel="nofollow"><div class="header_soc_network_soc" style="background:url(https://fortran-new.ru/polz/2019/08/soc-fb.jpg);"></div></a></div><div class="header_soc_network_one"><a href="https://ok.ru/group/56167165591636" target="_blank" rel="nofollow"><div class="header_soc_network_soc" style="background:url(https://fortran-new.ru/polz/2019/11/soc-od.jpg);"></div></a></div><div class="header_soc_network_one"><a href="https://twitter.com/FortranNew" target="_blank" rel="nofollow"><div class="header_soc_network_soc" style="background:url(https://fortran-new.ru/polz/2019/08/soc-tw.jpg);"></div></a></div><div class="header_soc_network_one"><a href="https://www.youtube.com/c/Fortran-newRu?sub_confirmation=1" target="_blank" rel="nofollow"><div class="header_soc_network_soc" style="background:url(https://fortran-new.ru/polz/2019/08/soc-yt.jpg);"></div></a></div>          </div>
+          <!-- <div class="header_buy header_padding tabletd align_right valign_middle">Ваша корзина пуста</div> -->
+        </div>
+      </div>
+    </header>
+
+
+
+
+<nav><div class="nav" itemscope itemtype="https://schema.org/SiteNavigationElement"><div class="max_width"><ul class="menu_ul full_w"><li class="menu_li"><a class="menu_a" itemprop="url" href="https://fortran-new.ru/" rel="home"><span itemprop="name">Главная</span></a></li><li class="menu_li"><a class="menu_a" itemprop="url" href="https://fortran-new.ru/products/" ><span itemprop="name">Товары</span></a></li><li class="menu_li"><a class="menu_a" itemprop="url" href="https://fortran-new.ru/services/" ><span itemprop="name">Услуги</span></a></li><li class="menu_li"><a class="menu_a" itemprop="url" href="https://fortran-new.ru/programmy/" ><span itemprop="name">Программы</span></a></li><li class="menu_li"><a class="menu_a" itemprop="url" href="https://fortran-new.ru/novosti/" ><span itemprop="name">Новости</span></a></li><li class="menu_li"><a class="menu_a" itemprop="url" href="https://fortran-new.ru/kontakty/" ><span itemprop="name">Об авторе</span></a></li><li class="menu_li"><a class="menu_a" itemprop="url" href="https://fortran-new.ru/feeds/" ><span itemprop="name">Узнавайте о новых статьях</span></a></li><div class="clear"></div></ul></div></div><!-- Мобильное меню --><div class="mobile_nav"><div class="mobile_nav_zatemnenie" onclick="mobile_nav_button_close();"></div><ul class="mobile_menu_ul"><li class="mobile_menu_li_button"><div class="mobile_nav_button_close" onclick="mobile_nav_button_close();"></div></li><li class="mobile_menu_li"><a class="mobile_menu_a" href="https://fortran-new.ru/">Главная</a></li><li class="mobile_menu_li"><a class="mobile_menu_a" href="https://fortran-new.ru/products/">Товары</a></li><li class="mobile_menu_li"><a class="mobile_menu_a" href="https://fortran-new.ru/services/">Услуги</a></li><li class="mobile_menu_li"><a class="mobile_menu_a" href="https://fortran-new.ru/programmy/">Программы</a></li><li class="mobile_menu_li"><a class="mobile_menu_a" href="https://fortran-new.ru/novosti/">Новости</a></li><li class="mobile_menu_li"><a class="mobile_menu_a" href="https://fortran-new.ru/kontakty/">Об авторе</a></li><li class="mobile_menu_li"><a class="mobile_menu_a" href="https://fortran-new.ru/feeds/">Узнавайте о новых статьях</a></li></ul></div><!-- End Мобильное меню --></nav><div class="mainpagewidth"><div class="navigation_margin"><div class="titledirect" itemscope="" itemtype="https://schema.org/BreadcrumbList"><span itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem"><a class="lcp_html_navigation_span_a" title="Главная" itemprop="item"  href="/" ><span itemprop="name">Главная</span></a><meta itemprop="position" content="0"></span><span class="lcp_html_navigation_span"> > </span><span itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem"><a class="lcp_html_navigation_span_a" title="Pascal/Delphi" itemprop="item"  href="/pascaldelphi/" ><span itemprop="name">Pascal/Delphi</span></a><meta itemprop="position" content="1"></span><span class="lcp_html_navigation_span"> > </span><span class="lcp_html_navigation_span">Игра &quot;Поймай меня&quot; на Borland Delphi 7</span></div></div></div><div class="content_all_lcp mainpagewidth_lcp"><div class="sidebar_lcp">
+
+
+
+<aside><div class="rubrik" itemscope itemtype="https://schema.org/WPSideBar"><meta itemprop="name" content="Рубрики"><ul class="rubrik_ul full_w"><li class="rubrik_li"><a class="rubrik_a" href="https://fortran-new.ru/novosti/">Новости</a></li><li class="rubrik_li"><a class="rubrik_a" href="https://fortran-new.ru/rabota-s-kompyuterom/">Компьютерная грамотность</a></li><li class="rubrik_li"><a class="rubrik_a" href="https://fortran-new.ru/sozdanie-i-raskrutka-sajta/">Создание и раскрутка сайта</a></li><li class="rubrik_li"><a class="rubrik_a" href="https://fortran-new.ru/pascaldelphi/">Pascal/Delphi</a></li><li class="rubrik_li"><a class="rubrik_a" href="https://fortran-new.ru/programmy/">Программы</a></li><li class="rubrik_li"><a class="rubrik_a" href="https://fortran-new.ru/sozdanie-muzyki/">Создание музыки</a></li><li class="rubrik_li"><a class="rubrik_a" href="https://fortran-new.ru/remont-kompyuternogo-oborudovaniya/">Ремонт ПК</a></li><div class="clear"></div></ul></div><div class="sidebar_event_all"><div class="sidebar_event_title_all">Ближайшие мероприятия:</div></div><div class="sidebar_ads" itemscope itemtype="https://schema.org/WPAdBlock"><meta itemprop="name" content="Рекомендуем"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- Реклама в боковой колонке -->
+	<ins class="adsbygoogle"
+	style="display:block"
+	data-ad-client="ca-pub-2348228209994753"
+	data-ad-slot="7862199103"
+	data-ad-format="auto"
+	data-full-width-responsive="true"></ins>
+	<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+		</script></div></aside></div><div class="content_1col_lcp"><div itemscope="" itemtype="https://schema.org/Article"><section><main><div class="bodytitle"><h1 class="titlecontent" itemprop="headline">Игра &quot;Поймай меня&quot; на Borland Delphi 7</h1><!--<hr noshade size="1" class="hrbodypagetovar"><br>--></div><div class="bodycontent" itemprop="articleBody"><span itemscope="" itemprop="image" itemtype="https://schema.org/ImageObject"><img itemprop="url image" src="https://fortran-new.ru/polz/2019/05/igra-pojmaj-menya-na-delphi7-1.jpg" style="display:none;" alt="Скрин, фото игры поймай меня на делфи" title="Скриншот игры поймай меня"></span><p>Принцип самой простой и хорошо известной большому количеству людей игры &quot;Поймай меня&quot; состоит в том, чтобы поймать кнопку, появляющуюся в разных частях окна программы. Каким образом это можно осуществить?</p>
+
+<p>Сперва подготовим нашу форму к работе. Итак, в меню <strong>File</strong> создадим новое приложение:<strong> File&nbsp;</strong>&gt;&nbsp;<strong>New&nbsp;</strong>&gt;&nbsp;<strong>Application. </strong>Назовем игру &quot;Игра - Поймай меня!&quot;. Заголовок формы находится в окне свойств <strong>Object Inspector</strong> на вкладке <strong>Properties.</strong> Меняем значение <strong>Caption</strong> на <strong>Игра - Поймай меня!. </strong>Выключим автопрокрутку (<strong>AutoScroll</strong> устанавливаем значение на <strong>false</strong>). Однако, при запуске программы можно обнаружить, что окошко программы появляется в том же месте, где и находилось перед компиляцией. Чтобы запустить программму в центре экрана, изменим значение <strong>Position</strong> на <strong>poScreenCenter. </strong>Заметим, что чем меньше размер окна, тем проще пройти игру. Возьмем, к примеру размер окна 400x400. Для этого поменяем свойства <strong>Width</strong> и <strong>Height</strong> на <strong>400</strong>. Кроме того, запретим программе разворачиваться на весь экран. Для этого изменим свойство <strong>BorderStyle</strong> на <strong>bsDialog&nbsp;</strong>и расположим наше главное окно поверх всех окон: меняем <strong>FormStyle</strong> на <strong>fsStayOnTop. </strong>Теперь еще раз сверимся с таблицей свойств главного окна:</p>
+
+<table border="2">
+	<tbody>
+		<tr>
+			<td><strong>Свойства Form1</strong></td>
+			<td><strong>&nbsp;Значение</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;Caption</td>
+			<td>&nbsp;Игра - Поймай меня!</td>
+		</tr>
+		<tr>
+			<td>&nbsp;AutoScroll</td>
+			<td>&nbsp;false</td>
+		</tr>
+		<tr>
+			<td>&nbsp;Position</td>
+			<td>&nbsp;poScreenCenter</td>
+		</tr>
+		<tr>
+			<td>&nbsp;Width</td>
+			<td>&nbsp;400</td>
+		</tr>
+		<tr>
+			<td>&nbsp;Height</td>
+			<td>&nbsp;400</td>
+		</tr>
+		<tr>
+			<td>&nbsp;BorderStyle</td>
+			<td>&nbsp;bsDialog</td>
+		</tr>
+		<tr>
+			<td>&nbsp;FormStyle</td>
+			<td>&nbsp;fsStayOnTop</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Наше главное окно настроено, осталось добавить на него кнопку (<strong>Button1</strong>) и изменить свойства соответственно со следующей таблицей:</p>
+
+<table border="2">
+	<tbody>
+		<tr>
+			<td><strong>Свойства объекта Button1</strong></td>
+			<td><strong>Значение</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;Caption</td>
+			<td>&nbsp;Начать игру</td>
+		</tr>
+		<tr>
+			<td>&nbsp;Left</td>
+			<td>&nbsp;144</td>
+		</tr>
+		<tr>
+			<td>&nbsp;Top</td>
+			<td>&nbsp;152</td>
+		</tr>
+		<tr>
+			<td>&nbsp;Width</td>
+			<td>&nbsp;89</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Далее, так как по условию нашей задачи кнопка должна постоянно менять свои координаты, добавим на форму еще один объект - <strong>Timer</strong> (на вкладке <strong>System</strong>). По-умолчанию таймер включен&nbsp; и начнет выполняться сразу же после запуска программы. Но нам надо сделать, чтобы он запускался только после нажатия на кнопку &quot;Начать игру&quot;. Поэтому поменяем значение<strong> Enabled</strong> на <strong>False.</strong> Кроме того, если наш цикл будет повторяться ежесекундно - кнопка будет менять свои координаты медленно, игра станет более легкой и не интересной. Поэтому давайте свойство <strong>Interval</strong> изменим на <strong>500</strong>.</p>
+
+<table border="2">
+	<tbody>
+		<tr>
+			<td><strong>Свойства объекта Timer1</strong></td>
+			<td><strong>Значение</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;Enabled</td>
+			<td>&nbsp;False</td>
+		</tr>
+		<tr>
+			<td>&nbsp;Interval</td>
+			<td>&nbsp;500</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Итак, внешний вид программы создан, первоначальные настройки объектов заданы, перейдем к процессу программирования игры &quot;Поймай меня&quot;. В будущем, возможно, мы добавим еще несколько объектов.</p>
+
+<p>Прежде всего, необходимо прописать событие для кнопки, чтобы при нажатии на кнопку поменялось ее значение на &quot;Поймай меня!&quot; и запустился таймер. Для этого выделим нашу кнопку и в окне <strong>Object Inspector</strong> перейдем на вкладку <strong>Events.</strong> Затем, найдем процедуру <strong>OnClick</strong> и рядом пропишем ее название, например, <strong>OnButtonClick.</strong> Нажимаем на нее два раза кнопкой мыши (или, по желанию, Enter) и у нас появляется окно Unit1.pas со следующим кодом:</p>
+
+<p><code>procedure TForm1.OnButtonClick( Sender: TObject );<br />
+begin</code></p>
+
+<p><code>end;</code></p>
+
+<p><code>end.</code></p>
+
+<p>Теперь между строками <strong>begin</strong> и <strong>end</strong> пропишем код, позволяющий поменять значение кнопки &quot;Начать игру&quot; на &quot;Поймай меня!&quot;. Для этого обратимся к кнопке <strong>Button1</strong>, укажем ей свойство, которое необходимо поменять (<strong>Button1.Caption</strong>) и присвоим ей новое значение - &quot;Поймай меня!&quot;:</p>
+
+<p><code>Button1.Caption := &#39;Поймай меня!&#39;;</code></p>
+
+<p>Дальше нам нужно запустить сам таймер. Для этого точно так же обращаемся к объекту <strong>Timer1</strong>, выбираем свойство <strong>Enabled</strong> и меняем его значение на <strong>True</strong>:</p>
+
+<p><code>Timer1.Enabled := true;</code></p>
+
+<p>Перейдем к объекту <strong>Timer1</strong>. Нажимаем на значок секундомера два раза и прописываем код, позволяющий кнопке появится в случайной координате нашего окна:</p>
+
+<p><code>Button1.Left := random( form1.ClientWidth - button1.Width );<br />
+Button1.Top := random( form1.ClientHeight - button1.Height );</code></p>
+
+<p>Если Вам <a href="https://fortran-new.ru/pascaldelphi/generator-sluchajnyx-chisel-random/" target="_blank" title="Генератор случайных чисел (random)">генератор случайных чисел (random)</a> еще не знаком - рекомендую сначала научиться делать более простые программы с помощью Turbo Pascal и только после этого переходить на объектно-ориентированное программирование.</p>
+
+<p>Но что же означает form1.ClientWidth и form1.ClientHeight? Конечно же, это только внутренняя рабочая область нашей формы без полей, автопрокруток и т.п. Если бы мы взяли просто form1.width, мы бы натолкнулись на некоторые неточности и наша кнопка стала бы выезжать за пределы окна. Кроме того, чтобы в нашем случае кнопка не выходила за пределы окна, надо вычесть ее ширину и высоту. Попробуем запустить программу. Уже становится более интересно. Но как узнать, нажали ли мы на эту кнопку? Добавим счетчик, позволяющий подсчитывать количество кликов, а результат высветим на экран.</p>
+
+<p>Итак, добавим 4 объекта надписи (TLabel). Переименуем эти объекты в соотвествии со следующими таблицами:</p>
+
+<table border="2">
+	<tbody>
+		<tr>
+			<td><strong>Свойства объекта Label1</strong></td>
+			<td><strong>Значение</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;Caption</td>
+			<td>&nbsp;Поймано:</td>
+		</tr>
+		<tr>
+			<td>&nbsp;Left</td>
+			<td>&nbsp;8</td>
+		</tr>
+		<tr>
+			<td>&nbsp;Top</td>
+			<td>&nbsp;8</td>
+		</tr>
+		<tr>
+			<td>&nbsp;Height</td>
+			<td>&nbsp;13</td>
+		</tr>
+		<tr>
+			<td>&nbsp;Width</td>
+			<td>&nbsp;49</td>
+		</tr>
+	</tbody>
+</table>
+
+<table border="2">
+	<tbody>
+		<tr>
+			<td><strong>Свойства объекта Label2</strong></td>
+			<td><strong>Значение</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;Name</td>
+			<td>&nbsp;SumClick</td>
+		</tr>
+		<tr>
+			<td>&nbsp;Caption</td>
+			<td>&nbsp;0</td>
+		</tr>
+		<tr>
+			<td>&nbsp;Left</td>
+			<td>&nbsp;64</td>
+		</tr>
+		<tr>
+			<td>&nbsp;Top</td>
+			<td>&nbsp;8</td>
+		</tr>
+		<tr>
+			<td>&nbsp;Height</td>
+			<td>&nbsp;13</td>
+		</tr>
+		<tr>
+			<td>&nbsp;Width</td>
+			<td>&nbsp;6</td>
+		</tr>
+	</tbody>
+</table>
+
+<table border="2">
+	<tbody>
+		<tr>
+			<td><strong>Свойства объекта Label3</strong></td>
+			<td><strong>Значение</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;Caption</td>
+			<td>&nbsp;Осталось:</td>
+		</tr>
+		<tr>
+			<td>&nbsp;Left</td>
+			<td>&nbsp;296</td>
+		</tr>
+		<tr>
+			<td>&nbsp;Top</td>
+			<td>&nbsp;8</td>
+		</tr>
+		<tr>
+			<td>&nbsp;Height</td>
+			<td>&nbsp;13</td>
+		</tr>
+		<tr>
+			<td>&nbsp;Width</td>
+			<td>&nbsp;52</td>
+		</tr>
+	</tbody>
+</table>
+
+<table border="2">
+	<tbody>
+		<tr>
+			<td><strong>Свойства объекта Label4</strong></td>
+			<td><strong>Значение</strong></td>
+		</tr>
+		<tr>
+			<td>&nbsp;Name</td>
+			<td>&nbsp;Time</td>
+		</tr>
+		<tr>
+			<td>&nbsp;Caption</td>
+			<td>&nbsp;0</td>
+		</tr>
+		<tr>
+			<td>&nbsp;Left</td>
+			<td>&nbsp;352</td>
+		</tr>
+		<tr>
+			<td>&nbsp;Top</td>
+			<td>&nbsp;8</td>
+		</tr>
+		<tr>
+			<td>&nbsp;Height</td>
+			<td>&nbsp;13</td>
+		</tr>
+		<tr>
+			<td>&nbsp;Width</td>
+			<td>&nbsp;12</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Пойдем дальше, так как у нас будет использоваться всего одна кнопка, соответственно нужно определить, при каком условии нужно запускать программу, а при каком - подсчитывать количество нажатий. Можно оттолкнуться от таймера - если он работает - значит нужно ловить количество нажатий, если же нет - запускаем программу с самого начала.</p>
+
+<p>И тут появляется самая распространенная ошибка. Программа Delphi, так же, как и Pascal, очень строгая программа, особенно к ошибкам. И если к значению <strong>SumClick </strong>прибавить просто единицу (SumClick.Caption := SumClick.Caption + 1;), то это будет то же самое, что если мы сложим какой-то текст и 1. Это просто невозможно! Поэтому сначала надо перевести значение строки SumClick в число. Специально для этого есть функция StrToInt(). Тогда, чтобы перевести количество кликов в число, необходимо прописать следующее: StrToInt (SumClick.Caption);</p>
+
+<p>Но это еще не все. Теперь, чтобы нам присвоить полученное значение, нужно обратно перевести значение из числа в строку. Для этого есть функция IntToStr(). Таким образом наш счетчик прописываем следующим образом:</p>
+
+<p><code>SumClick.Caption := IntToStr (StrToInt (SumClick.Caption) + 1);</code></p>
+
+<p>Или построчно, используя переменную a, как integer:</p>
+
+<p><code>a := StrToInt (SumClick.Caption);&nbsp;&nbsp;&nbsp;&nbsp; // переводим строку в число<br />
+a := a + 1;&nbsp;&nbsp;&nbsp;&nbsp; // прибавляем единицу<br />
+SumClick.Caption := IntToStr (a);&nbsp;&nbsp;&nbsp;&nbsp; // переводим обратно число в строку</code></p>
+
+<p>Таким образом наш код примет следующий вид:</p>
+
+<p><code>if Timer1.Enabled = false then<br />
+begin<br />
+Button1.Caption := &#39;Поймай меня!&#39;;<br />
+Timer1.Enabled := true;<br />
+end<br />
+else<br />
+SumClick.Caption := IntToStr (StrToInt (SumClick.Caption) + 1);</code></p>
+
+<p>Однако любая программа должна каким-то образом придти к своему логическому завершению. Для этого добавим еще один объект <strong>Timer2</strong>. Он будет отсчитывать количество оставшегося времени (в сек). Допустим поставим секундомер на 1 минуту. Соответственно в 1-ой минуте содержится 60 секунд. В программировании у объекта Timer (свойство Interval) значение 1000 равняется одной секунде (скорость отсчета). В нашей программе 60 секунд мы устанавливаем для объекта Time.</p>
+
+<p><code>Time.Caption := &#39;15&#39;;</code></p>
+
+<table border="2">
+	<tbody>
+		<tr>
+			<td><strong>Свойства объекта Timer2</strong></td>
+			<td><strong>Значение</strong></td>
+		</tr>
+		<tr>
+			<td>Enabled</td>
+			<td>False</td>
+		</tr>
+		<tr>
+			<td>Interval</td>
+			<td>1000</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Этот таймер будет запускаться вместе со вторым таймером во время нажатия на кнопку &quot;Начать игру&quot;.</p>
+
+<p><code>if Timer1.Enabled = false then<br />
+begin<br />
+Button1.Caption := &#39;Поймай меня!&#39;;<br />
+Timer1.Enabled := true;<br />
+Timer2.Enabled := true;<br />
+end<br />
+else<br />
+SumClick.Caption := IntToStr (StrToInt (SumClick.Caption) + 1);</code></p>
+
+<p>Перейдем ко второму таймеру. Здесь действует такая же функция, как и у той, что мы прописывали для кнопки подсчета количества кликов. Единственное отличие - нам нужно не складывать предыдущее значение на 1, а вычитать.</p>
+
+<p><code>Time.Caption := IntToStr (StrToInt (Time.Caption) - 1);</code></p>
+
+<p>Теперь добавим условие, чтобы узнать, осталось ли у нас еще время или нет. Если же осталось - переходим к счетчику времени и вычитаем единицу. Если не осталось - выключаем все таймеры, ставим кнопку в первоначальное положение и проверяем, сколько раз мы ее поймали. Если ни разу - высвечиваем сообщение о том, что мы проиграли, иначе - мы выиграли.</p>
+
+<p><code>if StrToInt (Time.Caption) &gt; 0 then<br />
+Time.Caption := IntToStr (StrToInt (Time.Caption) - 1)<br />
+else<br />
+begin<br />
+Timer1.Enabled := false;<br />
+Timer2.Enabled := false;<br />
+Button1.Left := 144;<br />
+Button1.Top := 152;<br />
+Button1.Caption := &#39;Повторить&#39;;<br />
+if SumClick.Caption = &#39;0&#39; then<br />
+ShowMessage (&#39;Вы проиграли!&#39;)<br />
+else<br />
+ShowMessage (&#39;Поздравляем! Вы выиграли и поймали кнопку &#39; + SumClick.Caption + &#39; раз&#39;);<br />
+end;</code></p>
+
+<p><u><strong>Тогда полный код игры &quot;Поймай меня&quot; будет следующий:</strong></u></p>
+
+<p><code>unit Unit1;</code></p>
+
+<p><code>interface</code></p>
+
+<p><code>uses<br />
+Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms, Dialogs, StdCtrls, ExtCtrls;</code></p>
+
+<p><code>type TForm1 = class(TForm)<br />
+Button1: TButton;<br />
+Timer1: TTimer;<br />
+SumClick: TLabel;<br />
+Label1: TLabel;<br />
+Label2: TLabel;<br />
+Time: TLabel;<br />
+Timer2: TTimer;<br />
+procedure OnButtonClick (Sender: TObject);<br />
+procedure Timer1Timer (Sender: TObject);<br />
+procedure Timer2Timer (Sender: TObject);<br />
+private<br />
+{ Private declarations }<br />
+public<br />
+{ Public declarations }<br />
+end;</code></p>
+
+<p><code>var<br />
+Form1: TForm1;</code></p>
+
+<p><code>implementation</code></p>
+
+<p><code>{$R *.dfm}</code></p>
+
+<p><code>procedure TForm1.OnButtonClick (Sender: TObject);<br />
+begin<br />
+if Timer1.Enabled = false then<br />
+begin<br />
+SumClick.Caption := &#39;0&#39;;<br />
+Time.Caption := &#39;15&#39;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // количество оставшегося времени<br />
+Button1.Caption := &#39;Поймай меня!&#39;;<br />
+Timer1.Enabled := true;<br />
+Timer2.Enabled := true;<br />
+end<br />
+else<br />
+SumClick.Caption := IntToStr (StrToInt (SumClick.Caption) + 1);<br />
+end;</code></p>
+
+<p><code>procedure TForm1.Timer1Timer (Sender: TObject);<br />
+begin<br />
+Button1.Left := random (form1.ClientWidth - button1.Width);<br />
+Button1.Top := random (form1.ClientHeight - button1.Height);<br />
+end;</code></p>
+
+<p><code>procedure TForm1.Timer2Timer (Sender: TObject);<br />
+begin<br />
+if StrToInt (Time.Caption) &gt; 0 then<br />
+Time.Caption := IntToStr (StrToInt (Time.Caption) - 1)<br />
+else<br />
+begin Timer1.Enabled := false;<br />
+Timer2.Enabled := false;<br />
+Button1.Left := 144;<br />
+Button1.Top := 152;<br />
+Button1.Caption := &#39;Повторить&#39;;<br />
+if SumClick.Caption = &#39;0&#39; then<br />
+ShowMessage (&#39;Вы проиграли!&#39;)<br />
+else<br />
+ShowMessage (&#39;Поздравляем! Вы выиграли и поймали кнопку &#39; + SumClick.Caption + &#39; раз&#39;);<br />
+end;<br />
+end;</code></p>
+
+<p><code>end.</code></p>
+
+<p style="text-align:center"><code><img alt="Игра поймай меня на Borland Delphi 7" src="https://fortran-new.ru/polz/2018/09/igra-pojmaj-menya-na-delphi7.jpg" style="max-width:383px; width:100%" title="Игра поймай меня на Borland Delphi 7" /></code></p>
+
+<p><u><strong>Задания:</strong></u></p>
+
+<ul>
+	<li><strong>Разработать небольшую программу калькулятор со всеми стандартными функциями.</strong></li>
+</ul>
+
+<hr />
+<p>Ответы к заданиям предыдущей статьи:</p>
+
+<ul>
+	<li>Наведение указателя мыши на форму - это свойство, событие, процедура или функция?</li>
+</ul>
+
+<p>Ответ: Событие</p>
+
+<ul>
+	<li>Появление всплывающей подсказки над кнопкой - это свойство, процедура, объект или событие?</li>
+</ul>
+
+<p>Если бы вопрос встал насчет самой всплывающей подсказки - то это был бы объект. Кроме того, всплывающая подсказка записывается в свойствах объекта, что существенно затрудняет вопрос задачи. Однако появление всплывающей подсказки - это уже какое-то действие, а действие относится к событию.</p>
+
+<p>Ответ: Событие</p>
+
+<ul>
+	<li>Написать программу, позволяющую изменить текст &quot;Первоначальное значение&quot; объекта Edit1 при нажатии на кнопку Button1.</li>
+</ul>
+
+<p>Интересно, что значение объекта Edit1 можно изменить не с помощью свойства <strong>Caption</strong>, а с помощью <strong>Text</strong>. Поэтому программа примет следующий вид:</p>
+
+<p><code>...<br />
+procedure TForm1.Button1Click (Sender: TObject);<br />
+begin<br />
+Edit1.Text := &#39;Текст изменен&#39;;<br />
+end;</code></p>
+
+<p><code>end.</code></p>
+
+<hr />
+<p style="text-align:center"><strong><a href="https://fortran-new.ru/pascaldelphi/osnovnye-ponyatiya-v-delphi/" title="Основные понятия в Delphi">&lt;&lt;Предыдущая статья</a><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong><a href="https://fortran-new.ru/pascaldelphi/pishem-kalkulyator-na-delphi-7-chast1/" title="Пишем калькулятор на Delphi 7 (часть1)">Следующая статья &gt;&gt;</a></strong></p>
+<p class="spandateresstatei">Опубликовано: <span itemprop="datePublished">2013-01-28 23:19:52</span><meta itemprop="dateModified" content="2019-08-17 00:23:54"></p></div><div class="pohogie_articles_block_title">Читайте также:</div><div class="pohogie_articles_block_all"><div class="blockrubrcategor"><a class="blockrubrcategor_a" href="https://fortran-new.ru/pascaldelphi/znakomstvo-s-turbo-pascal/"><div class="blockrubrcategor_img_div"><div class="blockrubrcategor_img" style="background:url( https://fortran-new.ru/polz/2019/05/struktura-programmy-na-pascal-1.jpg );"></div></div><div class="blockrubrcategor_title_tbl"><div class="blockrubrcategor_title_td"><div class="blockrubrcategor_title">Знакомство с Turbo Pascal</div></div></div><div class="blockrubrcategor_next_div"><div class="blockrubrcategor_next">Читать далее</div></div></a></div><div class="blockrubrcategor"><a class="blockrubrcategor_a" href="https://fortran-new.ru/pascaldelphi/osnovnye-ponyatiya-v-delphi/"><div class="blockrubrcategor_img_div"><div class="blockrubrcategor_img" style="background:url( https://fortran-new.ru/polz/2019/06/delphi-instruction.jpg );"></div></div><div class="blockrubrcategor_title_tbl"><div class="blockrubrcategor_title_td"><div class="blockrubrcategor_title">Основные понятия в Delphi</div></div></div><div class="blockrubrcategor_next_div"><div class="blockrubrcategor_next">Читать далее</div></div></a></div><div class="blockrubrcategor"><a class="blockrubrcategor_a" href="https://fortran-new.ru/pascaldelphi/pishem-kalkulyator-na-delphi-7-chast1/"><div class="blockrubrcategor_img_div"><div class="blockrubrcategor_img" style="background:url( https://fortran-new.ru/polz/2019/05/kalkulyator-na-delphi-1.jpg );"></div></div><div class="blockrubrcategor_title_tbl"><div class="blockrubrcategor_title_td"><div class="blockrubrcategor_title">Пишем калькулятор на Delphi 7 (часть1)</div></div></div><div class="blockrubrcategor_next_div"><div class="blockrubrcategor_next">Читать далее</div></div></a></div></div><div class="pohogie_products_block_title">Заказывайте товары и услуги:</div><div class="pohogie_products_block_all"><div class="blockrubrcategor"><a class="blockrubrcategor_a" href="https://fortran-new.ru/products/pascal-yazyk-programmirovaniya/"><div class="blockrubrcategor_img_div"><div class="blockrubrcategor_img" style="background:url( https://fortran-new.ru/polz/2019/08/dvd-pascal.jpg );"></div></div><div class="blockrubrcategor_title_tbl"><div class="blockrubrcategor_title_td"><div class="blockrubrcategor_title">Pascal - Язык программирования</div></div></div><div class="blockrubrcategor_cena_div"><div class="blockrubrcategor_cena">1 200 руб.</div></div><div class="blockrubrcategor_next_div"><div class="blockrubrcategor_next">Подробнее</div></div></a></div><div class="blockrubrcategor"><a class="blockrubrcategor_a" href="https://fortran-new.ru/products/programmirovanie-pascal/"><div class="blockrubrcategor_img_div"><div class="blockrubrcategor_img" style="background:url( https://fortran-new.ru/polz/2019/08/kniga-programmirovanie-paskal.jpg );"></div></div><div class="blockrubrcategor_title_tbl"><div class="blockrubrcategor_title_td"><div class="blockrubrcategor_title">Программирование — Pascal</div></div></div><div class="blockrubrcategor_cena_div"><div class="blockrubrcategor_cena">300 руб.</div></div><div class="blockrubrcategor_next_div"><div class="blockrubrcategor_next">Подробнее</div></div></a></div><div class="blockrubrcategor"><a class="blockrubrcategor_a" href="https://fortran-new.ru/products/php-programmirovanie/"><div class="blockrubrcategor_img_div"><div class="blockrubrcategor_img" style="background:url( https://fortran-new.ru/polz/2019/12/programmirovanie-php-online.jpg );"></div></div><div class="blockrubrcategor_title_tbl"><div class="blockrubrcategor_title_td"><div class="blockrubrcategor_title">PHP - программирование</div></div></div><div class="blockrubrcategor_cena_div"><div class="blockrubrcategor_cena">8 000 руб.</div></div><div class="blockrubrcategor_next_div"><div class="blockrubrcategor_next">Подробнее</div></div></a></div></div><div class="pohogie_ads_block_all_tbl"><div class="block_ads_td"><div class="block_ads"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- Похожая реклама (под статьями) 1 --><ins class="adsbygoogle"style="display:inline-block;width:260px;height:260px"data-ad-client="ca-pub-2348228209994753"data-ad-slot="1388070268"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div><div class="block_ads_td"><div class="block_ads"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- Похожая реклама (под статьями) 2 --><ins class="adsbygoogle"style="display:inline-block;width:260px;height:260px"data-ad-client="ca-pub-2348228209994753"data-ad-slot="6012537527"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div><div class="block_ads_td"><div class="block_ads"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- Похожая реклама (под статьями) 3 --><ins class="adsbygoogle"style="display:inline-block;width:260px;height:260px"data-ad-client="ca-pub-2348228209994753"data-ad-slot="5085989737"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div><hr><div><div class="comment_main_title">Комментарии (<span itemprop="commentCount">0</span>)</div><div class="comment_add_button" onclick="message_LCP('Чтобы оставить комментарий, необходимо войти на сайт!','false');">Оставить комментарий</div><div class="comment_all"></div></div></main></section><meta itemprop="identifier" content="1583"><meta itemprop="mainEntityOfPage" content="https://fortran-new.ru/pascaldelphi/igra-pojmaj-menya-na-borland-delphi-7/"><meta itemprop="author" content="Иван Горячкин"><meta itemprop="description" content="Принцип самой простой и хорошо известной игры &quot;Поймай меня&quot; состоит в том, чтобы поймать кнопку, появляющуюся в разных частях окна программы"><div itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization"><div itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject"><img itemprop="url image" src="https://fortran-new.ru/themes/fortrannew/img/logo48-48.png" style="display:none;"><meta itemprop="width" content="48"><meta itemprop="height" content="48"></div><meta itemprop="name" content="Немного о компьютере"><meta itemprop="address" content="Россия"><meta itemprop="telephone" content=""></div></div></div><div class="clear"></div></div><!-- END CONTENT -->
+<div class="body_space"><!-- NO TEXT --></div>
+</div>
+
+<footer class="full_w">
+<!-- FOOTER -->
+<div class="footer full_w" itemscope itemtype="https://schema.org/WPFooter">
+  <div class="mainpagewidth table full_w">
+    <div class="tabletd align_left valign_middle">
+      <div class="footer_text_left">
+        Все права защищены &copy; <span itemprop="copyrightYear">2011</span>-2022 <span itemprop="name">FORTRAN NEW company</span><br>
+              </div>
+    </div>
+    <div class="tabletd align_right valign_middle">
+      <div class="footer_text_right i_block">
+                <div class="footer_text_right_div">Автор сайта: Иван Горячкин</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END FOOTER -->
+</footer>
+<!-- Top100 (Kraken) Counter -->
+<script>
+    (function (w, d, c) {
+    (w[c] = w[c] || []).push(function() {
+        var options = {
+            project: 2731383,
+        };
+        try {
+            w.top100Counter = new top100(options);
+        } catch(e) { }
+    });
+    var n = d.getElementsByTagName("script")[0],
+    s = d.createElement("script"),
+    f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src =
+    (d.location.protocol == "https:" ? "https:" : "http:") +
+    "//st.top100.ru/top100/top100.js";
+
+    if (w.opera == "[object Opera]") {
+    d.addEventListener("DOMContentLoaded", f, false);
+} else { f(); }
+})(window, document, "_top100q");
+</script>
+<noscript>
+  <img src="//counter.rambler.ru/top100.cnt?pid=2731383" alt="Топ-100" />
+</noscript>
+<!-- END Top100 (Kraken) Counter -->
+
+
+
+
+
+<!-- Rating@Mail.ru counter -->
+<script type="text/javascript">
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "2211043", type: "pageView", start: (new Date()).getTime()});
+(function (d, w, id) {
+  if (d.getElementById(id)) return;
+  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+  ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+})(document, window, "topmailru-code");
+</script><noscript><div>
+<img src="//top-fwz1.mail.ru/counter?id=2211043;js=na" style="border:0;position:absolute;left:-9999px;" alt="" />
+</div></noscript>
+<!-- //Rating@Mail.ru counter -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(19020424, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/19020424" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
+
+
+
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-23478051-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+<!--LiveInternet counter--><script type="text/javascript">
+new Image().src = "//counter.yadro.ru/hit?r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";h"+escape(document.title.substring(0,150))+
+";"+Math.random();</script><!--/LiveInternet--><!-- Сообщения с ошибками -->
+<div class="message_error_div" id="message_error_div"></div>
+<!-- End Сообщения с ошибками -->
+</body></html>

@@ -1,0 +1,19 @@
+Program                   Version
+
+aimp                      3.0
+denwer                    3.0
+filezilla-x32             3.5.3
+filezilla-x64             3.29.0
+google-sitemap-generator  3.2.7
+hranitel-parolei          1.0
+hurrying-fires            3.0
+iptvplayer                3.0
+standartnue-prilogeniya   1.0
+van-karaoke               1.0
+wp-optimize               1.0
+xenu                      1.0
+winrar-x64                520
+winrar-x32                520
+wordpress                 4.9.1
+ultraiso                  9
+produkey                  1.85
