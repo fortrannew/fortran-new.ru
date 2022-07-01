@@ -1,0 +1,29 @@
+User-agent: *
+Disallow: /ckeditor
+Disallow: /includes
+Disallow: /polz/files
+Disallow: /polz/plugins
+Disallow: /profile
+Disallow: /themes
+Disallow: /*/feed/
+Disallow: /*.txt
+Disallow: /*.php
+Disallow: /*.html
+Disallow: /*?*
+
+User-agent: Yandex
+Disallow: /ckeditor
+Disallow: /includes
+Disallow: /polz/files
+Disallow: /polz/plugins
+Disallow: /profile
+Disallow: /themes
+Disallow: /*/feed/
+Disallow: /*.txt
+Disallow: /*.php
+Disallow: /*.html
+Disallow: /*?*
+
+Sitemap: https://fortran-new.ru/sitemap.xml
+
+host: https://fortran-new.ru/

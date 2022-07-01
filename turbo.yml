@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2021-07-02 08:57">
+<shop>
+<name>Немного о компьютере</name>
+<company>Немного о компьютере</company>
+<url>https://fortran-new.ru/</url>
+<platform>LCP</platform>
+<version>1.0.7.2</version>
+<currencies>
+<currency id="RUR" rate="1"/>
+</currencies>
+
+<categories>
+<category id="1377" parentId="0">Товары</category>
+<category id="1380" parentId="1377">Антивирусы</category>
+<category id="1669" parentId="1377">Видеокурсы</category>
+<category id="1670" parentId="1377">Книги</category>
+<category id="1674" parentId="0">Компьютерные услуги</category>
+<category id="1676" parentId="1674">Обслуживание компьютеров и ноутбуков</category>
+<category id="1684" parentId="1674">Заказать создание и продвижение сайтов</category>
+<category id="1690" parentId="1674">Дистанционное обучение</category>
+<category id="1696" parentId="1674">Реклама</category>
+</categories>
+
+<cpa>1</cpa>
+<offers>
+
+<offer id="1687" available="false">
+<vendor></vendor><url>https://fortran-new.ru/products/php-programmirovanie/</url>
+<price>16000</price>
+<currencyId>RUR</currencyId>
+<categoryId>1669</categoryId>
+<delivery>true</delivery>
+<pickup>false</pickup>
+<store>false</store>
+<name>PHP - программирование. Получить доступ к онлайн-курсу</name>
+<description><![CDATA[<p>Полный практический пошаговый онлайн-курс по PHP программированию для продвинутых пользователей компьютера.</p>
+
+<p>В этом курсе содержится:</p>
+
+<ul>
+	<li>Базовые навыки программирования (полный теоретический курс + ООП)</li>
+	<li>Курсы по верстке сайта, созданию одностраничника, блога, интернет-магазина</li>
+	<li>Разработка панели управления с нуля</li>
+	<li>Методы и модули быстрого программирования</li>
+	<li>Домашние задания</li>
+	<li>Технология LCP программирования (единая система для языков PHP, C#, C++, Delphi...)</li>
+	<li>И мы дарим CMS LCP для разработки любых типов сайтов</li>
+</ul>
+
+<p>При изучении этого курса Вы можете взять реальный заказ! Даже если не досмотрите курс до конца, Вы реально сможете заработать!</p>
+
+<p>Даже зная всё о программировании сайтов - это еще далеко не конец. Вам придется постоянно учиться, и подстраиваться под требования клиентов. Но зато работа будет проводиться далеко не на холоде, не в грязи. Многие программисты даже с клиентами вообще не общаются. Поэтому помимо интересной работы, есть еще очень много плюсов.</p>
+
+<p>Хотите получить максимальный эффект от программирования? Даже если уже знаете язык PHP, мы научим Вас применять знания на практике! Приобретайте курс прямо сейчас!</p>
+]]></description>
+<picture>https://fortran-new.ru/polz/2019/12/programmirovanie-php-online.jpg</picture>
+</offer>
+
+</offers></shop></yml_catalog>
