@@ -1,0 +1,110 @@
+.comment_main_title{
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.comment_add_button{
+  display: inline-block;
+  background: #0082a5;
+  border: 1px solid #004f65;
+  color: #ffffff;
+  padding: 10px 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+.comment_add_memo_button_div{
+  display: block;
+  margin-top: 10px;
+}
+
+.comment_add_memo_button{
+  display: inline-block;
+  background: #0082a5;
+  border: 1px solid #004f65;
+  color: #ffffff;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 2px;
+
+}
+
+.comment_all{
+  margin-top: 30px;
+}
+
+.comment_block{
+  margin-top: 15px;
+  background: #ffffff;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 2px;
+}
+
+.comment_block_tbl{
+  display: table;
+  width: 100%;
+}
+
+.comment_block_td{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.comment_photo{
+  width: 30px;
+  min-width: 30px;
+  max-width: 30px;
+}
+
+.comment_author{
+  width: 100%;
+  font-weight: bold;
+  font-size: 16px;
+  color: #444444;
+}
+
+.comment_description{
+  display: block;
+  width: 100%;
+  margin-top: 7px;
+}
+
+.comment_photo_img{
+  background-image: url(/img/gost.png);
+  background-position: center center!important;
+  background-repeat: no-repeat!important;
+  background-size: contain!important;
+  width: 20px;
+  height: 20px;
+}
+
+.comment_dater{
+  font-size: 14px;
+  color: #444444;
+  margin-top: 7px;
+}
+
+.comment_memo_div{
+  margin-top: 10px;
+}
+
+.comment_memo{
+  border: 1px solid #ccc;
+  padding: 7px;
+  border-radius: 2px;
+  width: 100%;
+  height: 150px;
+}
+
+.prov_moderated{
+  font-size: 14px;
+  font-weight: normal;
+}

@@ -1,0 +1,50 @@
+.files_vlog{
+  width: 100%;
+  margin-top: 40px;
+}
+
+.files_vlog_title_h2{
+  font-size: 24px;
+}
+
+.files_vlog_title_h2_padd{
+  margin-top: 20px;
+}
+
+.files_vlog_tbl{
+  display: table;
+  width: 100%;
+}
+
+.files_vlog_td{
+  display: table-cell;
+  vertical-align: top;
+  padding: 10px;
+}
+
+.files_vlog_img{
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+  height: 40px;
+  background-position: center center!important;
+  background-repeat: no-repeat!important;
+  background-size: contain!important;
+}
+
+.files_vlog_title{
+  width: 100%;
+  text-align: left;
+  font-size: 16px;
+  text-decoration: underline;
+  vertical-align: middle;
+}
+
+.files_vlog_title a{
+  font-size: 14px;
+  color: #555555;
+}
+
+.files_vlog_title a:hover{
+  color: #000000;
+}
