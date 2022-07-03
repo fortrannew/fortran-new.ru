@@ -1,0 +1,150 @@
+.i_block_table_all{
+  display: table;
+}
+
+.i_block_table{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.i_block_table_row{
+display: table-row;
+}
+
+.form_all{
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-style: normal;
+  font-size: 16px;
+  font-family: arial;
+  text-decoration: none;
+  text-transform: none;
+  color: #111;
+}
+
+.form_all input,.form_all select{
+  font-style: normal;
+  font-size: 14px;
+  font-family: 'Arial';
+  text-decoration: none;
+  text-transform: none;
+  color: #111;
+}
+
+.fin_button_div_center{
+  text-align: center;
+}
+
+.table_form{
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form_output{
+  display: none;
+}
+
+.column_1{
+  width: 200px;
+  min-width: 200px;
+  box-sizing: border-box;
+  padding: 2px 5px;
+}
+.column_2{
+  width: 100px;
+  min-width: 100px;
+  box-sizing: border-box;
+  text-align: right;
+  padding: 2px 5px;
+}
+.column_3{
+  width: 100%;
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 2px 5px;
+}
+
+.column_1_2{
+  width: 300px;
+  min-width: 300px;
+  box-sizing: border-box;
+  padding: 2px 5px;
+}
+
+.column_1_3{
+  width: 50px;
+  min-width: 50px;
+  box-sizing: border-box;
+  padding: 2px 5px;
+}
+
+.textarea_output{
+  width:100%;
+  height:200px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.input_full_w{
+  width: 100%;
+  padding: 3px;
+  border: 1px solid #ccc;
+  height: 32px;
+  box-sizing: border-box;
+}
+
+.i_block_table_row{
+}
+
+.checked_formes{
+  width: 20px;
+  height: 20px;
+}
+
+.fin_button{
+  background-color: #333;
+  color: #fff!important;
+  cursor: pointer;
+  font-size: 16px!important;
+  font-weight: bold;
+  padding: 14px 38px;
+  text-transform: uppercase!important;
+  border: none;
+  text-align: center;
+}
+
+.output_button{
+  background-color: #f3f3ff;
+  color: #333!important;
+  cursor: pointer;
+  font-size: 16px!important;
+  font-weight: bold;
+  padding: 14px 38px;
+  text-transform: uppercase!important;
+  border: 1px solid #afafaf;
+  text-align: center
+}
+
+.labeles{
+  width: auto;
+  height: 20px;
+  display: block;
+}
+
+.padding_top_formeres{
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 500px) {
+  .i_block_table_all{
+    display: block;
+  }
+  .i_block_table{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .i_block_table_row{
+  display: block;
+  }
+}

@@ -1,0 +1,42 @@
+.subscribe_input{
+  display: block;
+  font-style: normal;
+  font-size: 14px;
+  font-family: 'Arial';
+  text-decoration: none;
+  text-transform: none;
+  color: #111;
+  width: 100%;
+  max-width: 400px;
+  padding: 3px;
+  border: 1px solid #ccc;
+  height: 32px;
+  box-sizing: border-box;
+}
+
+.subscribe_button{
+  display: block;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 14px 38px;
+  text-transform: uppercase ;
+  border: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.subscribe_button:active,.subscribe_button:focus{
+  outline: none;
+}
+
+@media screen and (max-width: 400px) {
+  .subscribe_input{
+    max-width: 100%;
+  }
+  .subscribe_button{
+    width: 100%;
+  }
+}

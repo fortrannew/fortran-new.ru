@@ -1,0 +1,123 @@
+<!--
+***** Специально для страницы https://fortran-new.ru/raskrutka-sajta/fajl-robots-txt-dlya-vordpress/ *****
+-->
+
+ <link rel="stylesheet" href="/polz/plugins/create-robots/style.css">
+
+
+<div class="form_all" id="form_all">
+
+  <div class="form_generate" id="form_generate">
+    <div class="i_block_table_all table_form">
+        <div class="i_block_table column_1_2">
+          Сгенерировать для Яндекса:
+        </div>
+        <div class="i_block_table column_3">
+          <select name="vubor" id="vubor_for_formeser" class="input_full_w">
+            <option value="v1">Отдельно</option>
+            <option value="v2">Вместе</option>
+          </select>
+        </div>
+    </div>
+
+ <div class="i_block_table_all table_form padding_top_formeres">
+   <div class="i_block_table_row">
+     <div class="i_block_table column_1">
+       Ваш сайт:*
+     </div>
+     <div class="i_block_table column_3">
+       <table width="100%" cellspacing="0" cellpadding="0"><tr><td width="100px">http://&nbsp;</td><td width="100%"><input type="text" name="URL" id="URL" class="input_full_w" placeholder="Например, fortran-new.ru"></td></tr></table>
+     </div>
+   </div>
+   <div class="i_block_table_row">
+     <div class="i_block_table column_1">
+       URL Sitemap1:
+     </div>
+     <div class="i_block_table column_3">
+       <table width="100%" cellspacing="0" cellpadding="0"><tr><td width="100px">http://&nbsp;</td><td width="100%"><input type="text" name="sitemap1" id="sitemap1" class="input_full_w" placeholder="Например, fortran-new.ru/sitemap1.xml"></td></tr></table>
+     </div>
+   </div>
+   <div class="i_block_table_row">
+     <div class="i_block_table column_1">
+       URL Sitemap2:
+     </div>
+     <div class="i_block_table column_3">
+       <table width="100%" cellspacing="0" cellpadding="0"><tr><td width="100px">http://&nbsp;</td><td width="100%"><input type="text" name="sitemap2" id="sitemap2" class="input_full_w" placeholder="Например, fortran-new.ru/sitemap2.xml"></td></tr></table>
+     </div>
+   </div>
+   <div class="i_block_table_row">
+     <div class="i_block_table column_1">
+       URL Sitemap3:
+     </div>
+     <div class="i_block_table column_3">
+       <table width="100%" cellspacing="0" cellpadding="0"><tr><td width="100px">http://&nbsp;</td><td width="100%"><input type="text" name="sitemap3" id="sitemap3" class="input_full_w" placeholder="Например, fortran-new.ru/sitemap3.xml"></td></tr></table>
+     </div>
+   </div>
+   <div class="i_block_table_row">
+     <div class="i_block_table column_1">
+       URL Sitemap4:
+     </div>
+     <div class="i_block_table column_3">
+       <table width="100%" cellspacing="0" cellpadding="0"><tr><td width="100px">http://&nbsp;</td><td width="100%"><input type="text" name="sitemap4" id="sitemap4" class="input_full_w" placeholder="Например, fortran-new.ru/sitemap4.xml"></td></tr></table>
+     </div>
+   </div>
+ </div>
+
+ <div class="i_block_table_all table_form padding_top_formeres">
+   <div class="i_block_table_row">
+     <div class="i_block_table column_3">
+       URL, запрещённые к индексации:
+     </div>
+   </div>
+   <div class="i_block_table_row">
+     <div class="i_block_table column_3">
+       <input type="text" name="URL1" id="URL1" class="input_full_w" placeholder="Например, fortran-new.ru/test.php">
+     </div>
+   </div>
+   <div class="i_block_table_row">
+     <div class="i_block_table column_3">
+       <input type="text" name="URL2" id="URL2" class="input_full_w" placeholder="Например, fortran-new.ru/test.php">
+     </div>
+   </div>
+   <div class="i_block_table_row">
+     <div class="i_block_table column_3">
+       <input type="text" name="URL3" id="URL3" class="input_full_w" placeholder="Например, fortran-new.ru/test.php">
+     </div>
+   </div>
+   <div class="i_block_table_row">
+     <div class="i_block_table column_3">
+       <input type="text" name="URL4" id="URL4" class="input_full_w" placeholder="Например, fortran-new.ru/test.php">
+     </div>
+   </div>
+ </div>
+
+ <div class="i_block_table_all table_form padding_top_formeres">
+   <div class="i_block_table_row">
+     <div class="i_block_table column_3">
+       Архивы, запрещённые к индексации:
+     </div>
+   </div>
+ </div>
+ <script>
+ if (typeof new_list_for_formes!=='undefined'){
+   new_list_for_formes();
+ }
+ </script>
+
+ <div class="table_form fin_button_div_center padding_top_formeres">
+<input name="fin_button" id="fin_button" class="fin_button" value="Сгенерировать" type="submit" onclick="generation_for_formes();">
+</div>
+</div>
+
+<div class="form_output padding_top_formeres" id="form_output">
+<p><u>Ваш файл robots.txt:</u></p>
+ <textarea class="textarea_output" id="textarea_output"></textarea>
+  <div class="table_form fin_button_div_center">
+ <input type="button" class="output_button padding_top_formeres" value="Скопировать код" onclick="CopyToClipboardFormes(document.getElementById('textarea_output'))==true?message_LCP('Код успешно скопирован в буфер обмена!',true):message_LCP('Не удалось скопировать код!',false);">
+</div>
+</div>
+</div>
+
+
+
+ <script src="/polz/plugins/create-robots/script.js" charset="utf-8"></script>
