@@ -1,0 +1,191 @@
+#bg_phon{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.70);
+  left: 0px;
+  top: 0px;
+  z-index: 3;
+  box-sizing: border-box;
+  /* display: none; */
+}
+
+#popup_vhod{
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 4;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  left: 0px;
+  top: 0px;
+  display: table;
+  /* display: none; */
+}
+
+.popup_window_div{
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.popup_window{
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  max-width: 736px;
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  border: 3px solid #999999;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: left;
+}
+
+.popup_window_close{
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  right: -14px;
+  top: -12px;
+  cursor: pointer;
+}
+
+.popup_window_close_img{
+  width: 100%;
+}
+
+.popup_window_close_mobile{
+  display: none;
+}
+
+.popup_title{
+  font-weight: bold;
+  font-size: 18px;
+  margin: 10px 0px 20px;
+}
+
+.popup_title_row{
+  display: block;
+}
+
+.popup_el_row{
+  display: table;
+  box-sizing: border-box;
+  margin-top: 15px;
+}
+
+.popup_el_row_title{
+  display: table-cell;
+  width: 230px;
+  min-width: 230px;
+  text-align: right;
+  padding-right: 30px;
+  box-sizing: border-box;
+  font-size: 12px;
+  color: #000;
+}
+
+.popup_el_row_input{
+  display: table-cell;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.popup_line_row{
+  display: table;
+  box-sizing: border-box;
+  margin: 20px 0px 5px;
+}
+
+.popup_line_row_left{
+  display: table-cell;
+  width: 230px;
+  min-width: 230px;
+  text-align: left;
+  padding-right: 20px;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+.popup_line_row_right{
+  display: table-cell;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: right;
+  vertical-align: middle;
+}
+
+.mobilepopupinputyv{
+  width: 100%;
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-color: #d9d9d9;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #FFF;
+  box-sizing: border-box;
+}
+
+.vhodtitlezabulpassa{
+  color: #4a4636;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.accauntvhodline{
+  margin-top: 15px;
+}
+
+.accauntvhodbut{
+  color: #000;
+  background: #ccc;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+
+
+
+@media screen and (max-width: 766px) {
+  .popup_window_close{
+    right: 0px;
+    top: 0px;
+    border-top-right-radius: 15px;
+  }
+  .popup_window_close_img{
+    display: none;
+  }
+  .popup_window_close_mobile{
+    display: block;
+    background: #999999;
+    width: 34px;
+    height: 34px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    line-height: 34px;
+    text-align: center;
+    font-size: 20px;
+    color: #e6e6e6;
+    border-left: 3px solid #999999;
+    border-bottom: 3px solid #999999;
+    font-weight: bold;
+  }
+}

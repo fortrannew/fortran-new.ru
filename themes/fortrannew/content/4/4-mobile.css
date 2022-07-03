@@ -1,0 +1,16 @@
+/* @media screen and (max-width: 850px) {
+  .spantitlerurbrpublic{
+    margin: 10px 0px;
+  }
+} */
+@media screen and (max-width: 650px) {
+  .block_bodycontent_img{
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .blockrubrcategor{
+    width: 100%;
+    margin-right: 0px;
+  }
+}

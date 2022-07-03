@@ -1,0 +1,13 @@
+@media screen and (max-width: 650px) {
+  .bodytitle{
+    padding: 0px 10px;
+  }
+  .bodycontent{
+    padding: 10px;
+  }
+  .rubrik_main_li{
+    width: 100%;
+    margin: 0px;
+    margin-top: 15px;
+  }
+}

@@ -1,0 +1,29 @@
+.button_buy{
+  display: inline-block;
+  background: #077900;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 10px 30px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.button_oform{
+  display: inline-block;
+  background: #ec6d00;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 10px 30px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.button_zakaz{
+  display: inline-block;
+  background: #ff0000;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 10px 30px;
+  cursor: pointer;
+  text-align: center;
+}

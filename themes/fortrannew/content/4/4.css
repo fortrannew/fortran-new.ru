@@ -1,0 +1,141 @@
+.block_bodycontent_img{
+  width: 100%;
+  max-width: 200px!important;
+}
+
+.blockrubrcategor_div{
+  margin-top: 20px;
+}
+
+.blockrubrcategor{
+  display: inline-block;
+  background: #ffffff;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  padding: 20px;
+  width: 335px;
+  height: 350px;
+  vertical-align: top;
+}
+
+.blockrubrcategor_a{
+  display: block;
+  text-decoration: none;
+  color: #333333;
+  font-size: 18px;
+  width: 100%;
+}
+
+.blockrubrcategor_a:hover{
+  color: #000000;
+}
+
+.blockrubrcategor_img_div{
+  display: block;
+}
+
+.blockrubrcategor_img{
+  display: block;
+  background-position: center center!important;
+  background-repeat: no-repeat!important;
+  background-size: contain!important;
+  width: 100%;
+  height: 200px;
+}
+
+.blockrubrcategor_title_tbl{
+  display: table;
+  height: 56px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.blockrubrcategor_title_td{
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+}
+
+.blockrubrcategor_title{
+  display: inline-block;
+  font-size: 16px;
+}
+
+.blockrubrcategor_next_div{
+  display: block;
+  padding: 20px 0px;
+  width: 100%;
+  text-align: center;
+}
+
+.blockrubrcategor_a:hover>.blockrubrcategor_next_div>.blockrubrcategor_next{
+  color: #cd0a0a!important;
+  border-bottom: 1px dotted #cd0a0a!important;
+}
+
+.blockrubrcategor_next{
+  display: inline-block;
+  font-size: 16px;
+  color: #000000;
+  border-bottom: 1px dotted #000000;
+}
+
+.spantitlerurbrcategor{
+  display: block;
+  /* color: #000!important; */
+  text-decoration: none;
+  /* font-weight: bold; */
+  /* font-size: 16px; */
+  /* font-family: Arial, Helvetica, sans-serif; */
+  /* text-transform: uppercase; */
+}
+
+.spantitlerurbrcategor:hover{
+/* color:#000; */
+}
+
+.h2titlerurbrcategor{
+  color: #000!important;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  line-height: 16px;
+  /* text-transform: uppercase; */
+}
+
+.h2titlerurbrcategor:hover{
+color:#000;
+}
+
+.spantitlerurbrpublic{
+  font-style: italic;
+  font-size: 11px;
+  padding: 3px 0px;
+}
+
+.spantitlerurbrpublic_a{
+  font-style: italic;
+  text-decoration: none;
+  color: #000000;
+  font-size: 11px;
+}
+
+.spantitlerurbrpublic_a:hover{
+  text-decoration: underline;
+}
+
+.spandescript{
+line-height:20px;
+}
+
+.spandateres{
+line-height:20px;
+font-size:11px;
+font-family:Arial, Helvetica, sans-serif;
+color:#666;
+}

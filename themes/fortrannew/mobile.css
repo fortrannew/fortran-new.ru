@@ -1,0 +1,124 @@
+@media screen and (max-width: 1150px) {
+  .navigation_margin{
+    padding: 0px 10px;
+  }
+  .sidebar_lcp{
+    padding-left: 10px;
+    width: 240px;
+    min-width: 240px;
+    max-width: 240px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .header_search{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .header_table{
+    display: block!important;
+  }
+  .header_soc_network_soc{
+    width: 38px;
+    min-width: 38px;
+    max-width: 38px;
+  }
+  .header_soc_network_one{
+    margin-left: 5px;
+  }
+  .header_soc_network{
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .header_phone{
+    display: none;
+  }
+  .sidebar_lcp{
+    display: none;
+  }
+  .content_lcp,.content_1col_lcp,.content_2col_lcp,.content_3col_lcp{
+    width: 100%;
+    padding: 10px 0px;
+  }
+  .yytt{
+    height: 250px!important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer_text_left{
+    display: none;
+  }
+  .footer_text_right{
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .nav{
+    display: none;
+  }
+  .header_mobile_nav{
+    display: table-cell;
+  }
+  .header_title{
+    width: 350px;
+    min-width: 350px;
+    max-width: 350px;
+  }
+  .header_title_h1{
+    font-size: 20px;
+  }
+  .header{
+    border-bottom: 1px solid #ccc;
+  }
+  .content_all_lcp{
+    /* padding: 0px 5px; */
+  }
+  .content_lcp,.content_1col_lcp,.content_2col_lcp,.content_3col_lcp{
+    /* padding: 10px 0px; */
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .header_title{
+    width: 290px;
+    min-width: 290px;
+    max-width: 290px;
+  }
+  .header_title_h1{
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .header_empty{
+    display: none;
+  }
+  .header_title{
+    width: 270px;
+    min-width: 270px;
+    max-width: 270px;
+  }
+  .header_title_h1{
+    font-size: 14px;
+  }
+  .panel_accaunt_login{
+    max-width: 130px;
+  }
+  .header_soc_network_soc {
+    width: 32px;
+    min-width: 32px;
+    max-width: 32px;
+  }
+}

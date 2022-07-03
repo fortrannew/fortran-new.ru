@@ -1,0 +1,48 @@
+@charset "utf-8";
+#ttotalpagefilder {
+margin: 0px;
+padding: 0px;
+list-style-type: none;
+width:auto;
+}
+
+#ttotalpagefilder a {
+font-size:12px;
+font-family:Arial;
+font-weight:bold;
+color:#000;
+text-decoration:none;
+padding-top:5px;
+vertical-align:middle;
+}
+
+#ttotalpagefilder li {
+width:25px;
+height:25px;
+float:right;
+margin: 1px;
+cursor:pointer;
+}
+#ttotalpagefilder li:hover {
+background:#FFDF4A;
+}
+
+.ttotalpagefildersel{
+background:#f9d004;
+}
+
+.ttotalpagefilderli{
+background:#FFEB8C;
+}
+
+.uppercontent{
+margin-bottom:10px;
+margin-top:10px;
+}
+
+.ttotalpagefilderdiv{
+width:auto;
+vertical-align:middle;
+text-align:center;
+display:table-cell;
+}

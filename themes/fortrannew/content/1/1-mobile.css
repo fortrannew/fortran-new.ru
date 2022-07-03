@@ -1,0 +1,30 @@
+@media screen and (max-width: 1050px) {
+  .products_page_tbl{
+    display: block;
+    width: 100%;
+  }
+  .products_page_td_left{
+    display: inline-block;
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+  }
+  .products_page_td_right{
+    display: inline-block;
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+    padding-left: 0px;
+    margin-top: 20px;
+  }
+  .photos_gallery_shop_main_position_flates{
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+  }
+  .photos_gallery_shop_main_photos_flates{
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+  }
+}

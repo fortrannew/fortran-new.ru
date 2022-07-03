@@ -1,0 +1,26 @@
+/* POPUP Сообщения с ошибками */
+.message_error_div{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: transparent;
+  width: 200px;
+  height: 100%;
+  display: none;
+  z-index: 101;
+}
+
+.message_error_red{
+  display: none;
+  position: fixed;
+  background: #ff0000;
+  padding: 10px 30px 10px 15px;
+  width: 200px;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: Arial;
+  border-radius: 5px;
+  word-wrap: break-word;
+  /*transition: all 0.3s;*/
+}
+/* End POPUP Сообщения с ошибками */

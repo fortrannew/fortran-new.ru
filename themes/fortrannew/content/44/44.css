@@ -1,0 +1,363 @@
+.currbuyshag{
+border: #ccc solid 1px;
+width:100%;
+background-color:#eee;
+}
+
+.currbuyshagtitl{
+padding:12px;
+font-weight:normal;
+font-size:14px;
+color:#aaa;
+}
+
+.currbuyshagactiv{
+background-color:#fff;
+color:#000;
+font-weight:bold;
+font-size:14px;
+}
+
+.currbuyshagspaceactiv{
+background: url("/themes/fortrannew/content/44/img/spacestepactive.png") no-repeat;
+}
+
+.currbuyshagspacenoactiv1{
+background: url("/themes/fortrannew/content/44/img/spacestepnoactive1.png") no-repeat;
+}
+
+.currbuyshagspacenoactiv2{
+background: url("/themes/fortrannew/content/44/img/spacestepnoactive2.png") no-repeat;
+}
+
+.korbuytitl_tbl{
+  display: table;
+  width: 100%;
+}
+
+.korbuytitl_thead{
+  display: table-header-group;
+}
+
+.korbuytitl_tbody{
+  display: table-row-group;
+}
+
+.korbuytitl_tfoot{
+  display: table-footer-group;
+}
+
+.korbuytitl_tr{
+  display: table-row;
+}
+
+.korbuytitl_th{
+  display: table-cell;
+}
+
+.korbuytitl_td{
+  display: table-cell;
+}
+
+.korbuytitl_thead>.korbuytitl_tr>.titl_products{
+  text-align: left;
+  width: 100%;
+}
+
+.korbuytitl_thead>.korbuytitl_tr>.titl_artikyl{
+  text-align: left;
+  width: 50px;
+  min-width: 50px;
+  max-width: 50px;
+}
+
+.korbuytitl_thead>.korbuytitl_tr>.titl_price{
+  text-align: center;
+  width: 100px;
+  min-width: 100px;
+  max-width: 100px;
+}
+
+.korbuytitl_thead>.korbuytitl_tr>.titl_count{
+  text-align: center;
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+}
+
+.korbuytitl_thead>.korbuytitl_tr>.title_total{
+  text-align: center;
+  width: 80px;
+  min-width: 80px;
+  max-width: 80px;
+}
+
+.korbuytitl_thead>.korbuytitl_tr>.title_remove{
+  text-align: center;
+  width: 50px;
+  min-width: 50px;
+  max-width: 50px;
+}
+
+.korbuytitl_tbody>.korbuytitl_tr>.titl_products>.titl_products_tbl>.titl_products_photo{
+  width: 80px;
+  min-width: 80px;
+  max-width: 80px;
+}
+
+.korbuytitl_tbody>.korbuytitl_tr>.titl_products>.titl_products_tbl>.titl_products_title{
+  width: 100%;
+}
+
+.korbuytitl_tfoot>.korbuytitl_tr>.titl_itogo{
+  text-align: left;
+}
+
+.korbuytitl_tfoot>.korbuytitl_tr>.titl_total{
+  text-align: center;
+}
+
+.korbuytitl_tfoot>.korbuytitl_tr>.korbuytitl_td{
+  vertical-align: middle;
+}
+
+.korbuytitl{
+border: 1px solid #e5e5e5;
+width:100%;
+background-color:#fff;
+}
+
+.titl_products_tbl{
+  display: table;
+  width: 100%;
+}
+
+.korbuytitl .korbuytitl_thead .korbuytitl_th{
+border-bottom: 2px solid #e5e5e5;
+font-weight: normal;
+vertical-align: middle;
+}
+
+.korbuytitl .korbuytitl_tbody .korbuytitl_td{
+  vertical-align: middle;
+}
+
+.korbuytitl .korbuytitl_tfoot .korbuytitl_td{
+border-top: 2px solid #e5e5e5;
+font-weight: normal;
+}
+
+.korbuyoplat{
+margin-bottom:5px;
+border: 1px solid #e5e5e5;
+width:100%;
+height:100px;
+background-color:#fff;
+cursor:pointer;
+}
+
+.korbuyoplat:hover{
+background:#fffbec;
+}
+
+.korbuyoplat td{
+  padding: 10px;
+}
+
+.korbuytitloplat{
+color:#444;
+font-size:16px;
+padding:10px;
+}
+
+.korbuytitlstr{
+color:#777;
+font-size:13px;
+padding:10px;
+}
+
+.korbuytitlstr2{
+color:#333;
+font-size:13px;
+padding:10px;
+}
+
+.korbuybut{
+border:1px solid #80c31d;
+color:#fff;
+background:#80c31d;
+font-style: italic;
+font-size:11px;
+font-weight:bold;
+padding:10px 25px 10px 25px;
+cursor:pointer;
+}
+
+.korbuycanc{
+border:1px solid #80c31d;
+color:#80c31d;
+background:#fff;
+font-style: italic;
+font-size:11px;
+font-weight:bold;
+padding:10px 25px 10px 25px;
+cursor:pointer;
+}
+
+.korbuytovplus{
+border:1px solid #3eb5f1;
+background:#fff;
+color:#3eb5f1;
+width:25px;
+height:27px;
+font-weight:bold;
+cursor:pointer;
+-moz-user-select: none;
+-khtml-user-select: none;
+user-select: none;
+}
+
+.korbuytovplus:hover{
+background:#3eb5f1;
+color:#fff;
+}
+
+.korbuytovminus{
+border:1px solid #3eb5f1;
+background:#fff;
+color:#3eb5f1;
+width:25px;
+height:27px;
+font-weight:bold;
+cursor:pointer;
+-moz-user-select: none;
+-khtml-user-select: none;
+user-select: none;
+}
+
+.korbuytovminus:hover{
+background:#3eb5f1;
+color:#fff;
+}
+
+.korbuytoveditgran{
+border-top:1px solid #3eb5f1;
+border-bottom:1px solid #3eb5f1;
+background:#fff;
+color:#3eb5f1;
+width:25px;
+height:27px;
+font-weight:bold;
+}
+
+.korbuytovedit{
+background:#fff;
+color:#3eb5f1;
+border:none;
+width:25px;
+height:27px;
+font-weight:bold;
+font-family:Arial, Helvetica, sans-serif;
+text-align:center;
+}
+
+.korbuytovedit:focus,.korbuytovedit:active{
+outline: none;
+}
+
+.korbuytitlstr_img{
+  background-position: center center!important;
+  background-repeat: no-repeat!important;
+  background-size: contain!important;
+  width: 100%;
+  height: 54px;
+}
+
+.deletekorbuy_img{
+  background: url(/themes/fortrannew/content/44/img/deletekorbuy.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.korbuytitlstr table{
+  margin-bottom: auto!important;
+}
+
+.product_itog_td{
+  font-weight: bold;
+}
+
+.services_itog_td{
+  font-weight: bold;
+}
+
+.product_itog_all{
+  font-weight: bold!important;
+}
+
+.button_next{
+  display: inline-block;
+  background: #ec6d00;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 10px 30px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.button_prev{
+  display: inline-block;
+  background: #ffffff;
+  color: #ec6d00;
+  border: 1px solid #ec6d00;
+  font-size: 18px;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+.button_zakaz{
+  display: inline-block;
+  background: #077900;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+.payment_li_img{
+  width: 100%;
+  height: 78px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.payment_active{
+  background: #cccccc!important;
+}
+
+.services_tbl{
+  display: table;
+  width: 100%;
+}
+
+.services_td{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.services_td_gal{
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+}
+
+.services_td_title{
+  width: 100%;
+  cursor: pointer;
+  color: #555555;
+}
